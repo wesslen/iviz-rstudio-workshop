@@ -1,16 +1,36 @@
-## iviz-rstudio-workshop
+## Interactive Visualizations with RStudio
 
+### RStudio Cloud
+
+I recommend using RStudio Cloud for workshop materials. 
+
+You can sign up for a free account [https://rstudio.cloud](https://rstudio.cloud/).
+
+Note, if you already have a [shinyapps.io](https://shinyapps.io) account, you can use those credentials.
+
+### Instructions
+
+To get started, log onto RStudio Cloud, then click the arrow on the "New Project" and select "New Project from Git Repo."
+
+Then, enter this GitHub repo's path (https://github.com/wesslen/iviz-rstudio-workshop) and click enter. You're now ready to go! (It's that easy.)
 
 ### Installing github packages in RStudio Cloud
 
-Unfortunately, RStudio Cloud does not automatically download dependent packags from CRAN (it's still in alpha). 
+Unfortunately, RStudio Cloud does not automatically download dependent packags from CRAN, especially if its from a GitHub repo (it's still in alpha). 
 
-#### ggplot2 dev (needed for Plotly + ggplot2)
+For most times, I've found it's important to set first while using RStudio Cloud.
 
 ```{r}
-devtools::install_github("hadley/assertthat")
-source("https://install-github.me/r-lib/cli")
+options(repos = "https://cran.rstudio.com/" )
+```
 
-packages <- c("cli")
+#### r2d3
 
+As an example, r2d3 requires several dependency packages.
+
+```{r}
+options(repos = "https://cran.rstudio.com/" )
+pck <- c("devtools", "digest", "htmltools", "htmlwidgets", "jsonlite", "Rcpp", "rstudioapi", "yaml")
+install.packages(pck)
+devtools::install_github("rstudio/r2d3")
 ```
