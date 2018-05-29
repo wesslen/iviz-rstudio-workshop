@@ -8,6 +8,14 @@ You can sign up for a free account [https://rstudio.cloud](https://rstudio.cloud
 
 Note, if you already have a [shinyapps.io](https://shinyapps.io) account, you can use those credentials.
 
+Alternatively, you can download [R](http://archive.linux.duke.edu/cran/) and [R Studio](https://www.rstudio.com/products/rstudio/download/) locally. Then you can download the GitHub repo through the Clone or Download button.
+
+If you have Git setup on your computer, you can type the following to install in your current directory.
+
+```{bash}
+git clone https://github.com/wesslen/iviz-rstudio-workshop.git
+```
+
 ### Instructions
 
 To get started, log onto RStudio Cloud, then click the arrow on the "New Project" and select "New Project from Git Repo."
