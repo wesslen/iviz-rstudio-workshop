@@ -1,3 +1,6 @@
+# Slides
+/presentations/*
+
 # History files
 .Rhistory
 .Rapp.history

@@ -59,6 +59,30 @@ z %>%
   dyEvent("2016-02-08", "Super Bowl") %>%
   dyEvent("2016-01-25", "NFC Championship")
 
+## visNetwork http://datastorm-open.github.io/visNetwork/
+# install.packages("visNetwork")
+
+# install.packages("igraph")
+library(igraph)
+
+# regular expression -- get only tweets that have "RT @"
+rts <- filter(tweets, stringr::str_detect(tweets$text, "RT @"))
+
+names <- unique(rts$user_key)
+
+edges <- tibble(node1 = rts$user_key, 
+                node2 = gsub('.*RT @([a-zA-Z0-9_]+):? ?.*', rts$text, repl="\\1")) %>%
+  filter(node1 %in% names & node2 %in% names) %>%
+  group_by(node1, node2) %>%
+  summarise(weights = n())
+
+g <- graph_from_data_frame(d=edges, directed=TRUE)
+
+library(visNetwork)
+
+visIgraph(g) %>% 
+  visInteraction(navigationButtons = TRUE)
+
 #### Advanced
 
 ## r2d3 (https://rstudio.github.io/r2d3/)
