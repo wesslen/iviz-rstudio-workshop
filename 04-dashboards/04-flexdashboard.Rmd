@@ -17,7 +17,7 @@ months <- c("Jan","Feb","Mar",
             "Oct","Nov","Dec")
 
 # read in and clean up fields
-df <- read_csv("./data/cleaned-stops.csv") %>%
+df <- read_csv("../data/cleaned-stops.csv") %>%
   mutate(Month = forcats::fct_relevel(Month, months),
          Year = as.character(Year),
          DriverRace = case_when(
