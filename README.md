@@ -8,8 +8,6 @@ To run the code, you have two options.
 
 I **highly** recommend using RStudio Cloud for workshop materials. 
 
-If you have an RStudio Cloud account, click this link: <https://rstudio.cloud/project/40182>
-
 If you don't have an account yet, you can sign up for a free account [https://rstudio.cloud](https://rstudio.cloud/). If you already have a [shinyapps.io](https://shinyapps.io) account, you can use those credentials instead.
 
 If that links doesn't work, you can create a new project from a GitHub repo, copy/paste 
@@ -40,7 +38,7 @@ git clone https://github.com/wesslen/iviz-rstudio-workshop.git
 
 After getting RStudio set up, it's easier if you install the R libraries first (first set take about 3.5 minutes on cloud, second take about 30 seconds).
 
-Run the file `00-install-packages.R``.
+Run the file `00-install-packages.R`.
 
 It simply runs this code:
 
