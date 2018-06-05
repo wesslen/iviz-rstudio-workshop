@@ -8,7 +8,7 @@ To run the code, you have two options.
 
 I **highly** recommend using RStudio Cloud for workshop materials. 
 
-If you have an RStudio Cloud account, click this link (and you're done): <>
+If you have an RStudio Cloud account, click this link: <https://rstudio.cloud/project/40182>
 
 If you don't have an account yet, you can sign up for a free account [https://rstudio.cloud](https://rstudio.cloud/).
 
@@ -28,7 +28,9 @@ If you have Git setup on your computer, you can clone the repo into your current
 git clone https://github.com/wesslen/iviz-rstudio-workshop.git
 ```
 
-If you run this option, you will need to make sure you have all the R libraries installed locally.
+## Installing packages
+
+After getting RStudio set up, it's easier if you install the R libraries first (first set take about 3.5 minutes on cloud, second take about 30 seconds).
 
 ```{r}
 pck <- c("tidyverse","plotly","shiny","leaflet","dygraphs","flexdashboard","ggridges",
