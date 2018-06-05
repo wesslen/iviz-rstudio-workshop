@@ -24,9 +24,7 @@ ui <- fluidPage(
   )
 )  
 
-
 # server
-
 server <- function(input, output) {
   
   #reactive event that runs only when the button is hit
@@ -55,11 +53,6 @@ server <- function(input, output) {
   output$click <- renderPrint({
     d <- event_data("plotly_click")
     if (is.null(d)) "Click events appear here (unhover to clear)" else d
-  })
-  
-  output$brush <- renderPrint({
-    d <- event_data("plotly_brush")
-    if (is.null(d)) "Brush events appear here (unhover to clear)" else d
   })
   
 }

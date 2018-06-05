@@ -4,39 +4,32 @@ options(repos = "https://cran.rstudio.com/" )
 # call tidyverse -- if you get an error, do you have tidyverse installed??
 library(tidyverse)
 
-# load tweets
-
-# If you don't have the file, you can load it directly from GitHub
-file <- "https://github.com/wesslen/summer-2017-social-media-workshop/raw/master/data/CharlotteTweets20Sample.csv"
-
+# file name
+file <- "./data/CharlotteTweets20Sample.csv"
 tweets <- read_csv(file)
 
-## spatial / leaflet 
-## https://rstudio.github.io/leaflet/
+## spatial / leaflet, see https://rstudio.github.io/leaflet/
 # install.packages("leaflet")
-library(leaflet)
+library(leaflet); library(stringr)
 
 query <- "beer"
 
-t <- tweets %>%
-  filter(stringr::str_detect(tweets$body, query)) %>%
+beerTweets <- tweets %>%
+  filter(str_detect(tweets$body, query)) %>%
   filter(!is.na(point_long))
 
-leaflet(t) %>%
+leaflet(beerTweets) %>%
   addTiles() %>%
-  addCircleMarkers(lng=t$point_lat, 
-                   lat=t$point_long,
-                   popup = t$body, 
+  addCircleMarkers(lng=beerTweets$point_lat, 
+                   lat=beerTweets$point_long,
+                   popup = beerTweets$body, 
                    stroke = FALSE, 
                    fillOpacity = 0.5, 
                    radius = 10, 
                    clusterOptions = markerClusterOptions())
 
-
-## time series (dygraph)
-## http://rstudio.github.io/dygraphs/index.html
-# install.packages("dygraphs")
-
+## time series (dygraph), see http://rstudio.github.io/dygraphs/index.html
+# install.packages("dygraphs"); install.packages("xts")
 library(dygraphs); library(xts)
 
 counts <- tweets %>%
@@ -54,26 +47,32 @@ dailyCounts <- xts(
 # can convert to weekly, monthly, yearly, etc
 weeklyCounts <- apply.weekly(dailyCounts, colSums)
 
-z <- dygraph(dailyCounts, main = "Charlotte Geo-located Tweets") %>% 
+dygraph(dailyCounts, main = "Charlotte Geo-located Tweets") %>% 
   dyRangeSelector() %>%
-  
-z %>% 
   dyEvent("2016-02-08", "Super Bowl") %>%
   dyEvent("2016-01-25", "NFC Championship")
 
 ## visNetwork http://datastorm-open.github.io/visNetwork/
-# install.packages("visNetwork")
-
-# install.packages("igraph")
+# install.packages("visNetwork"); install.packages("igraph")
 library(igraph)
 
-# regular expression -- get only tweets that have "RT @"
-rts <- filter(tweets, stringr::str_detect(tweets$text, "RT @"))
+# How to pull twitter from R (rtweet): see http://rtweet.info/
+# rtweets <- rtweet::search_tweets("#rstats", n = 18000, token = twitter_token)
 
-names <- unique(rts$user_key)
+# read in 17,829 (incl. RT's) tweets pulled June 5, 2018 with "#rstats"
+rtweets <- read_csv("./data/rtweets.csv")
 
-edges <- tibble(node1 = rts$user_key, 
-                node2 = gsub('.*RT @([a-zA-Z0-9_]+):? ?.*', rts$text, repl="\\1")) %>%
+# regular expression -- get only tweets that have "RT @", i.e. retweet
+term <- "ggplot2"
+
+rtweetsTerm <- rtweets %>%
+  filter(str_detect(text, "RT @")) %>%
+  filter(str_detect(text, term))
+
+names <- unique(rtweetsTerm$screen_name)
+
+edges <- tibble(node1 = rtweetsTerm$screen_name, 
+                node2 = gsub('.*RT @([a-zA-Z0-9_]+):? ?.*', rtweetsTerm$text, repl="\\1")) %>%
   filter(node1 %in% names & node2 %in% names) %>%
   group_by(node1, node2) %>%
   summarise(weights = n())
@@ -82,8 +81,44 @@ g <- graph_from_data_frame(d=edges, directed=TRUE)
 
 library(visNetwork)
 
+degTotal <- degree(g)
+V(g)$size <- 10*log(degTotal) + 10
+
 visIgraph(g) %>% 
-  visInteraction(navigationButtons = TRUE)
+  visInteraction(navigationButtons = TRUE) %>%
+  visEdges(arrows = list(to = list(enabled = TRUE, scaleFactor = 0.5))) %>%
+  visIgraphLayout("physics" = TRUE)
+
+### tidytext: see https://www.tidytextmining.com/
+# install.packages("tidytext")
+library(tidytext)
+
+# load stop words
+data("stop_words")
+
+# remove urls, lt, amp, gt
+replace_reg <- "https://t.co/[A-Za-z\\d]+|http://[A-Za-z\\d]+|&amp;|&lt;|&gt;|RT|https"
+
+tweet_words <- filter(rtweets, is_retweet == FALSE) %>%
+  mutate(text = str_replace_all(text, replace_reg, ""),
+         Date = as.Date(created_at)) %>%
+  unnest_tokens(word, text) %>%
+  anti_join(stop_words) %>%
+  count(Date, word, sort = TRUE) %>%
+  ungroup() %>%
+  bind_tf_idf(word, Date, n)
+
+tweet_words %>%
+  arrange(desc(tf_idf)) %>%
+  mutate(word = factor(word, levels = rev(unique(word)))) %>% 
+  group_by(Date) %>% 
+  top_n(10) %>% 
+  ungroup %>%
+  ggplot(aes(word, tf_idf, fill = as.factor(Date))) +
+  geom_col(show.legend = FALSE) +
+  labs(x = NULL, y = "tf-idf") +
+  facet_wrap(~Date, ncol = 4, scales = "free") +
+  coord_flip()
 
 #### Advanced
 

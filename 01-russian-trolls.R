@@ -1,5 +1,5 @@
 # install packages
-install.packages("tidyverse")
+# install.packages("tidyverse")
 
 # call (i.e., activate) tidyverse
 library(tidyverse)
