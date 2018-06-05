@@ -32,11 +32,11 @@ If you run this option, you will need to make sure you have all the R libraries 
 
 ```{r}
 pck <- c("tidyverse","plotly","shiny","leaflet","dygraphs",
-  "xts","igraph","visNetwork","tidytext")
+         "xts","igraph","visNetwork","tidytext","collapsibleTree","shinydashboard")
 install.packages(pck)
 
 pck2 <- c("devtools", "digest", "htmltools", "htmlwidgets", 
-  "jsonlite", "Rcpp", "rstudioapi", "yaml")
+          "jsonlite", "Rcpp", "rstudioapi", "yaml")
 install.packages(pck2)
 devtools::install_github("rstudio/r2d3")
 ```
