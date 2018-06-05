@@ -18,15 +18,17 @@ If that links doesn't work, you can create a new project from a GitHub repo, pas
 
 You can also run the code locally. 
 
-To do so, you will need to download [R](http://archive.linux.duke.edu/cran/) and [R Studio](https://www.rstudio.com/products/rstudio/download/) locally. 
+1. You will need to download [R](http://archive.linux.duke.edu/cran/) and [R Studio](https://www.rstudio.com/products/rstudio/download/) locally. 
 
-Next, you'll need to download the GitHub repo through the Clone or Download button.
+2. You'll need to download the GitHub repo through the Clone or Download button.
 
 If you have Git setup on your computer, you can clone the repo into your current directory.
 
 ```{bash}
 git clone https://github.com/wesslen/iviz-rstudio-workshop.git
 ```
+
+3. Open the file `project.Rproj` in RStudio. 
 
 ## Installing packages
 
