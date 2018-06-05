@@ -12,7 +12,13 @@ If you have an RStudio Cloud account, click this link: <https://rstudio.cloud/pr
 
 If you don't have an account yet, you can sign up for a free account [https://rstudio.cloud](https://rstudio.cloud/). If you already have a [shinyapps.io](https://shinyapps.io) account, you can use those credentials instead.
 
-If that links doesn't work, you can create a new project from a GitHub repo, paste `https://github.com/wesslen/iviz-rstudio-workshop.git` and click enter. If you go this route, proceed to install the packages as described below.
+If that links doesn't work, you can create a new project from a GitHub repo, copy/paste 
+
+```{bash}
+https://github.com/wesslen/iviz-rstudio-workshop.git
+```
+
+and click enter. If you go this route, proceed to install the packages as described below.
 
 ### 2) Run R/RStudio Locally
 
