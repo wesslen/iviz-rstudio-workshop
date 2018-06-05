@@ -31,7 +31,7 @@ git clone https://github.com/wesslen/iviz-rstudio-workshop.git
 If you run this option, you will need to make sure you have all the R libraries installed locally.
 
 ```{r}
-pck <- c("tidyverse","plotly","shiny","leaflet","dygraphs",
+pck <- c("tidyverse","plotly","shiny","leaflet","dygraphs","flexdashboard","ggridges",
          "xts","igraph","visNetwork","tidytext","collapsibleTree","shinydashboard")
 install.packages(pck)
 
