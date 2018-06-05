@@ -52,10 +52,13 @@ ipak <- function(pkg){
 }
 
 packages <- c("tidyverse","plotly","shiny","leaflet","dygraphs","flexdashboard","ggridges",
-         "xts","igraph","visNetwork","tidytext","collapsibleTree","shinydashboard",
-         "devtools","digest","htmltools","htmlwidgets", "jsonlite","Rcpp","rstudioapi","yaml")
+              "xts","igraph","visNetwork","tidytext","collapsibleTree","shinydashboard")
 
 ipak(packages)
+
+packages2 <- c("devtools","digest","htmltools","htmlwidgets", "jsonlite","Rcpp","rstudioapi","yaml")
+
+ipak(packages2)
 
 devtools::install_github("rstudio/r2d3")
 ```
