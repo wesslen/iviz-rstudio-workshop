@@ -43,15 +43,19 @@ Run the file `00-install-packages.R`.
 It runs this code:
 
 ```{r}
-pck1 <- c("tidyverse","plotly","shiny","leaflet","dygraphs","flexdashboard","ggridges",
-         "xts","igraph","visNetwork","tidytext","collapsibleTree","shinydashboard")
+# function to efficiently install packages
+ipak <- function(pkg){
+    new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE)
+}
 
-install.packages(pck1)
+packages <- c("tidyverse","plotly","shiny","leaflet","dygraphs","flexdashboard","ggridges",
+         "xts","igraph","visNetwork","tidytext","collapsibleTree","shinydashboard",
+         "devtools","digest","htmltools","htmlwidgets", "jsonlite","Rcpp","rstudioapi","yaml")
 
-pck2 <- c("devtools","digest","htmltools","htmlwidgets",
-          "jsonlite","Rcpp","rstudioapi","yaml")
-
-install.packages(pck2)
+ipak(packages)
 
 devtools::install_github("rstudio/r2d3")
 ```
