@@ -1,28 +1,47 @@
 ## Interactive Visualizations with RStudio
 
-### RStudio Cloud
+### Instructions:
 
-I recommend using RStudio Cloud for workshop materials. 
+To run the code, you have two options.
 
-You can sign up for a free account [https://rstudio.cloud](https://rstudio.cloud/).
+### 1) RStudio Cloud
 
-Note, if you already have a [shinyapps.io](https://shinyapps.io) account, you can use those credentials.
+I **highly** recommend using RStudio Cloud for workshop materials. 
 
-Alternatively, you can download [R](http://archive.linux.duke.edu/cran/) and [R Studio](https://www.rstudio.com/products/rstudio/download/) locally. Then you can download the GitHub repo through the Clone or Download button.
+If you have an RStudio Cloud account, click this link (and you're done): <>
 
-If you have Git setup on your computer, you can type the following to install in your current directory.
+If you don't have an account yet, you can sign up for a free account [https://rstudio.cloud](https://rstudio.cloud/).
+
+If you already have a [shinyapps.io](https://shinyapps.io) account, you can use those credentials instead. It's that easy.
+
+### 2) Run R/RStudio Locally
+
+You can also run the code locally. 
+
+To do so, you will need to download [R](http://archive.linux.duke.edu/cran/) and [R Studio](https://www.rstudio.com/products/rstudio/download/) locally. 
+
+Next, you'll need to download the GitHub repo through the Clone or Download button.
+
+If you have Git setup on your computer, you can clone the repo into your current directory.
 
 ```{bash}
 git clone https://github.com/wesslen/iviz-rstudio-workshop.git
 ```
 
-### Instructions
+If you run this option, you will need to make sure you have all the R libraries installed locally.
 
-To get started, log onto RStudio Cloud, then click the arrow on the "New Project" and select "New Project from Git Repo."
+```{r}
+pck <- c("tidyverse","plotly","shiny","leaflet","dygraphs",
+  "xts","igraph","visNetwork","tidytext")
+install.packages(pck)
 
-Then, enter this GitHub repo's path (https://github.com/wesslen/iviz-rstudio-workshop) and click enter. You're now ready to go! (It's that easy.)
+pck2 <- c("devtools", "digest", "htmltools", "htmlwidgets", 
+  "jsonlite", "Rcpp", "rstudioapi", "yaml")
+install.packages(pck2)
+devtools::install_github("rstudio/r2d3")
+```
 
-### Installing github packages in RStudio Cloud
+### FYI: Installing github packages in RStudio Cloud
 
 Unfortunately, RStudio Cloud does not automatically download dependent packags from CRAN, especially if its from a GitHub repo (it's still in alpha). 
 
