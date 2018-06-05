@@ -40,14 +40,19 @@ After getting RStudio set up, it's easier if you install the R libraries first (
 
 Run the file `00-install-packages.R`.
 
-It simply runs this code:
+It runs this code:
 
 ```{r}
-pck <- c("tidyverse","plotly","shiny","leaflet","dygraphs","flexdashboard","ggridges",
-         "xts","igraph","visNetwork","tidytext","collapsibleTree","shinydashboard",
-         "devtools","digest","htmltools","htmlwidgets","jsonlite",
-         "Rcpp","rstudioapi","yaml")
-install.packages(pck)
+pck1 <- c("tidyverse","plotly","shiny","leaflet","dygraphs","flexdashboard","ggridges",
+         "xts","igraph","visNetwork","tidytext","collapsibleTree","shinydashboard")
+
+install.packages(pck1)
+
+pck2 <- c("devtools","digest","htmltools","htmlwidgets",
+          "jsonlite","Rcpp","rstudioapi","yaml")
+
+install.packages(pck2)
+
 devtools::install_github("rstudio/r2d3")
 ```
 
