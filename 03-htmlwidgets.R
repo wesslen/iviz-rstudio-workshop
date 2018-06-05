@@ -63,11 +63,11 @@ library(igraph)
 rtweets <- read_csv("./data/rtweets.csv")
 
 # regular expression -- get only tweets that have "RT @", i.e. retweet
-term <- "ggplot2"
+term <- "tidyverse"
 
 rtweetsTerm <- rtweets %>%
   filter(str_detect(text, "RT @")) %>%
-  filter(str_detect(text, term))
+  filter(str_detect(tolower(text), term))
 
 names <- unique(rtweetsTerm$screen_name)
 
