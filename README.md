@@ -34,14 +34,16 @@ git clone https://github.com/wesslen/iviz-rstudio-workshop.git
 
 After getting RStudio set up, it's easier if you install the R libraries first (first set take about 3.5 minutes on cloud, second take about 30 seconds).
 
+Run the file `00-install-packages.R``.
+
+It simply runs this code:
+
 ```{r}
 pck <- c("tidyverse","plotly","shiny","leaflet","dygraphs","flexdashboard","ggridges",
-         "xts","igraph","visNetwork","tidytext","collapsibleTree","shinydashboard")
+         "xts","igraph","visNetwork","tidytext","collapsibleTree","shinydashboard",
+         "devtools","digest","htmltools","htmlwidgets","jsonlite",
+         "Rcpp","rstudioapi","yaml")
 install.packages(pck)
-
-pck2 <- c("devtools", "digest", "htmltools", "htmlwidgets", 
-          "jsonlite", "Rcpp", "rstudioapi", "yaml")
-install.packages(pck2)
 devtools::install_github("rstudio/r2d3")
 ```
 
