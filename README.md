@@ -48,7 +48,7 @@ We’ll dive deeper into Shiny apps and review basic architecture, layouts, and 
 
 ### Part 3: Advanced Shiny
 
-We’ll explore advanced Shiny functionality including interactions, persistent storage, and deploying apps publicly on [shinyapps.io](https://www.shinyapps.io/). We’ll also consider more advanced layout templates like [shinydashboard](https://rstudio.github.io/shinydashboard/) to provide professional looking dashboard templates.
+We’ll consider more advanced layout templates like [shinydashboard](https://rstudio.github.io/shinydashboard/) to provide professional looking dashboard templates. We’ll also explore advanced Shiny functionality including interactions, persistent storage, and deploying apps publicly on [shinyapps.io](https://www.shinyapps.io/).
 
 
 | Day 3: Wed July XX  | Advanced Shiny            |
