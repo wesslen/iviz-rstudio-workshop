@@ -1,5 +1,7 @@
 # Interactive Visualizations with RStudio
 
+In this three-part workshop series, we’ll use RStudio tools like tidyverse, Shiny, and htmlwidgets to develop interactive visualizations. 
+
 ## Sponsored by 
 
 * [UNC Charlotte Data Science Initiative](https://dsi.uncc.edu/)
@@ -16,8 +18,6 @@
 
 * [Ryan Wesslen](http://wesslen.github.io)
 
-In this three-part workshop series, we’ll use RStudio tools like tidyverse, Shiny, and htmlwidgets to develop interactive visualizations. 
-
 ## Workshop Overview
 
 ### Part 1: Intro to Shiny and tidyverse
@@ -28,7 +28,7 @@ We’ll introduce [**RStudio**](https://www.rstudio.com/products/RStudio/) along
 | ------------------- | ------------------------------------------------------- |
 | Welcome             | [PollEverywhere](https://pollev.com/ryanwesslen365) and This GitHub Page |
 | Lecture             | [Introduction to Tidyverse](./slides/00-Tidyverse-webinar.pdf) |
-| Hands On Tutorial   | [Tidyverse Intro: Russian Trolls on Twitter](./01-russian-trolls.R) [HTML](http://rpubs.com/ryanwesslen/iviz-workshop1)   |
+| Hands On Tutorial   | [Tidyverse Intro: Russian Trolls on Twitter](./01-russian-trolls.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop1)   |
 | Lecture   | [Introduction to Shiny](./slides/intro-to-shiny.pdf) |
 | Hands On Tutorial   | Shiny Hello World and Deploying to shinyapps.io |
 | Hands On Assignment | [Day 1 Assignment](./assignments/day1.R) |
@@ -41,9 +41,9 @@ We’ll dive deeper into Shiny apps and review basic architecture, layouts, and 
 | ------------------- | ------------------------------------------------------- |
 | Refresher & Warm-up | [PollEverywhere](https://pollev.com/ryanwesslen365) and [Russian Trolls Text Search App](./02-shinyapp/app.R) |
 | Lecture             | [Intermediate Shiny](./slides/02-shiny.pdf) |
-| Hands On Tutorial   | [Shiny Inputs, Outpus, and Layouts](./02-input-outputs.R) [HTML](http://rpubs.com/ryanwesslen/iviz-workshop2)   |
+| Hands On Tutorial   | [Shiny Inputs, Outpus, and Layouts](./02-input-outputs.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop2)   |
 | Demo / Website   | [htmlwidgets](https://www.htmlwidgets.org/) |
-| Hands On Tutorial   | [htmlwidgets for social media data](./02-htmlwidgets.R) [HTML](http://rpubs.com/ryanwesslen/iviz-workshop3)   |
+| Hands On Tutorial   | [htmlwidgets for social media data](./02-htmlwidgets.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop3)   |
 | Hands On Assignment | [Day 2 Assignment](./assignments/day2.R) |
 
 ### Part 3: Advanced Shiny
@@ -55,7 +55,7 @@ We’ll explore advanced Shiny functionality including interactions, persistent 
 | ------------------- | ------------------------------------------------------- |
 | Warm-up             | [PollEverywhere](https://pollev.com/ryanwesslen365) |
 | Lecture             | [Templates: shinydashboard and flexdashboard](./slides/03-shiny.pdf) |
-| Hands On Tutorial   | [shinydashboard](./04-templates.R) [HTML](http://rpubs.com/ryanwesslen/iviz-workshop4)   |
+| Hands On Tutorial   | [shinydashboard](./04-templates.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop4)   |
 | Lecture             | [Interactions, Persistent Storage, and In Production](./slides/03-shiny.pdf) |
 | Present Projects | Students present their Shiny systems. |
 
@@ -184,7 +184,7 @@ Shiny is the most important tool that enables full visualization systems. These 
 
 #### R Markdown
 
-[R Markdown](http://rmarkdown.rstudio.com/) are examples of [literate programming](https://en.wikipedia.org/wiki/Literate_programming), i.e., code combined with plain language (as well as code output). The output can be an HTML, pdf, or even a Word document!
+[R Markdown](http://rmarkdown.rstudio.com/) is an example of [literate programming](https://en.wikipedia.org/wiki/Literate_programming), i.e., code combined with plain language (as well as code output). The output can be an HTML, pdf, or even a Word document!
 
 R Markdown can do nearly anything -- build a website, write a LaTeX paper for publication, even write a book! (For example, <http://r4ds.had.co.nz/> is written in R Markdown. See the [GitHub](https://github.com/hadley/r4ds).)
 
