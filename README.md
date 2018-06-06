@@ -28,7 +28,7 @@ We’ll introduce [**RStudio**](https://www.rstudio.com/products/RStudio/) along
 | ------------------- | ------------------------------------------------------- |
 | Welcome             | [PollEverywhere](https://pollev.com/ryanwesslen365) and This GitHub Page |
 | Lecture             | [Introduction to Tidyverse](./slides/00-Tidyverse-webinar.pdf) |
-| Hands On Tutorial   | [Tidyverse Intro: Russian Trolls on Twitter](./01-russian-trolls.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop1)   |
+| Hands On Tutorial   | [tidyverse code](./01-russian-trolls.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop1)   |
 | Lecture   | [Introduction to Shiny](./slides/intro-to-shiny.pdf) |
 | Hands On Tutorial   | Shiny Hello World and Deploying to shinyapps.io |
 | Hands On Assignment | [Day 1 Assignment](./assignments/day1.R) |
@@ -41,9 +41,9 @@ We’ll dive deeper into Shiny apps and review basic architecture, layouts, and 
 | ------------------- | ------------------------------------------------------- |
 | Refresher & Warm-up | [PollEverywhere](https://pollev.com/ryanwesslen365) and [Russian Trolls Text Search App](./02-shinyapp/app.R) |
 | Lecture             | [Intermediate Shiny](./slides/02-shiny.pdf) |
-| Hands On Tutorial   | [Shiny Inputs, Outpus, and Layouts](./02-input-outputs.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop2)   |
+| Hands On Tutorial   | [input/output code](./02-input-outputs.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop2)   |
 | Demo / Website   | [htmlwidgets](https://www.htmlwidgets.org/) |
-| Hands On Tutorial   | [htmlwidgets for social media data](./02-htmlwidgets.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop3)   |
+| Hands On Tutorial   | [htmlwidget code](./02-htmlwidgets.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop3)   |
 | Hands On Assignment | [Day 2 Assignment](./assignments/day2.R) |
 
 ### Part 3: Advanced Shiny
@@ -55,7 +55,7 @@ We’ll consider more advanced layout templates like [shinydashboard](https://rs
 | ------------------- | ------------------------------------------------------- |
 | Warm-up             | [PollEverywhere](https://pollev.com/ryanwesslen365) |
 | Lecture             | [Templates: shinydashboard and flexdashboard](./slides/03-shiny.pdf) |
-| Hands On Tutorial   | [shinydashboard](./04-templates.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop4)   |
+| Hands On Tutorial   | [shinydashboard code](./04-templates.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop4)   |
 | Lecture             | [Interactions, Persistent Storage, and In Production](./slides/03-shiny.pdf) |
 | Present Projects | Students present their Shiny systems. |
 
