@@ -8,7 +8,7 @@ library(tidyverse)
 url <- "http://nodeassets.nbcnews.com/russian-twitter-trolls/tweets.csv"
 tweets <- read_csv(url)
 
-# functions in tidyverse
+# count function
 count(tweets, user_key)
 
 # assignment operator

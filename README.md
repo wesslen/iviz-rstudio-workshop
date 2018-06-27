@@ -2,15 +2,17 @@
 
 In this three-part workshop series, we’ll use RStudio tools like tidyverse, Shiny, and htmlwidgets to develop interactive visualizations. 
 
+![](./slides/img/readme/beer.gif)
+
 ## Sponsored by 
 
 * [UNC Charlotte Data Science Initiative](https://dsi.uncc.edu/)
 
 ## Date, Time and Location
 
-* July X (Part 1), July X (Part 2), and July X (Part 3) 
+* July 11 (Part 1), July 18 (Part 2), and July 25 (Part 3) 
 
-* XX:XX pm - XX:XX pm
+* 5:30 pm - 8:15 pm
 
 * XXX
  
@@ -24,20 +26,20 @@ In this three-part workshop series, we’ll use RStudio tools like tidyverse, Sh
 
 We’ll introduce [**RStudio**](https://www.rstudio.com/products/RStudio/) along with [`tidyverse`](https://www.tidyverse.org/), a unified set of R packages for end-to-end data science. These packages include core data science workflow tools for data acquisition, processing and visualization. We’ll end with an introduction to [**Shiny**](http://shiny.rstudio.com/), an R package for building interactive web apps. Shiny apps are flexible web applications that can be embedded within web pages, dashboards, and [**RMarkdown**](https://rmarkdown.rstudio.com/) output like presentations or notebooks. 
 
-| Day 1: Wed July XX  | Intro to tidyverse and Shiny |
+| Day 1: Wed July 11  | Intro to tidyverse and Shiny |
 | ------------------- | ------------------------------------------------------- |
 | Welcome             | [PollEverywhere](https://pollev.com/ryanwesslen365) and This GitHub Page |
 | Lecture             | [Introduction to Tidyverse](./slides/00-Tidyverse-webinar.pdf) |
-| Hands On Tutorial   | [tidyverse code](./01-russian-trolls.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop1)   |
+| Hands On Tutorial   | [Russian Trolls](./01-russian-trolls.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop1)   |
 | Lecture   | [Introduction to Shiny](./slides/intro-to-shiny.pdf) |
 | Hands On Tutorial   | Shiny Hello World and Deploying to shinyapps.io |
 | Hands On Assignment | [Day 1 Assignment](./assignments/day1.R) |
 
 ### Part 2: Shiny and htmlwidgets
 
-We’ll dive deeper into Shiny apps and review basic architecture, layouts, and reactions using simple, hands-on examples. We’ll also introduce [**htmlwidgets**](http://www.htmlwidgets.org/) (e.g., plotly, r2d3, leaflet), simple R packages for producing HTML-based interactive visualizations that can be extended with HTML, CSS, and JavaScript. In this part, we’ll explore basic exploratory data analysis visualizations (line, bar, scatterplots) as well as how to visualize important aspects of social media data like social networks, unstructured text, and geospatial data.
+We’ll dive deeper into Shiny apps and review basic architecture, layouts, and reactivity with hands-on examples. We’ll also introduce [**htmlwidgets**](http://www.htmlwidgets.org/) (e.g., plotly, r2d3, leaflet), simple R packages for producing HTML-based interactive visualizations that can be extended with HTML, CSS, and JavaScript. In this part, we’ll explore basic exploratory data analysis visualizations (line, bar, scatterplots) as well as how to visualize important aspects of social media data like social networks, unstructured text, and geospatial data.
 
-| Day 2: Wed July XX  | Shiny and htmlwidgets    |
+| Day 2: Wed July 18  | Shiny and htmlwidgets    |
 | ------------------- | ------------------------------------------------------- |
 | Refresher & Warm-up | [PollEverywhere](https://pollev.com/ryanwesslen365) and [Russian Trolls Text Search App](./02-shinyapp/app.R) |
 | Lecture             | [Intermediate Shiny](./slides/02-shiny.pdf) |
@@ -51,7 +53,7 @@ We’ll dive deeper into Shiny apps and review basic architecture, layouts, and 
 We’ll consider more advanced layout templates like [shinydashboard](https://rstudio.github.io/shinydashboard/) to provide professional looking dashboard templates. We’ll also explore advanced Shiny functionality including interactions, persistent storage, and deploying apps publicly on [shinyapps.io](https://www.shinyapps.io/).
 
 
-| Day 3: Wed July XX  | Advanced Shiny            |
+| Day 3: Wed July 25  | Advanced Shiny            |
 | ------------------- | ------------------------------------------------------- |
 | Warm-up             | [PollEverywhere](https://pollev.com/ryanwesslen365) |
 | Lecture             | [Templates: shinydashboard and flexdashboard](./slides/03-shiny.pdf) |
@@ -181,6 +183,8 @@ Shiny is the most important tool that enables full visualization systems. These 
 * Tutorial (Intermediate): <http://shiny.rstudio.com/articles/app-formats.html>
 * Tutorial (Deployment): <http://shiny.rstudio.com/articles/deployment-web.html>
 * Where to deploy test Shiny Apps: <http://www.shinyapps.io/>
+* Tracking interactions: <https://shiny.rstudio.com/articles/usage-metrics.html>
+* [Bring Google Analytics data back into R](https://www.computerworld.com/article/2486018/business-intelligence/business-intelligence-how-to-extract-custom-data-from-the-google-analytics-api.html)
 
 #### R Markdown
 

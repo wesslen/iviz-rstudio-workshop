@@ -1,5 +1,5 @@
 # run for RStudio.Cloud
-options(repos = "https://cran.rstudio.com/" )
+# options(repos = "https://cran.rstudio.com/" )
 
 # call tidyverse -- if you get an error, do you have tidyverse installed??
 library(tidyverse)

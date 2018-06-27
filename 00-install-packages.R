@@ -1,5 +1,5 @@
 # options(repos = "https://cran.rstudio.com/" )
-packages <- c("tidyverse","plotly","shiny","leaflet","dygraphs","flexdashboard","ggridges",
+packages <- c("tidyverse","plotly","shiny","leaflet","dygraphs","flexdashboard","ggridges","learnr",
               "xts","igraph","visNetwork","tidytext","collapsibleTree","shinydashboard")
 
 install.packages(packages)

@@ -1,0 +1,186 @@
+---
+title: "Intro to Shiny"
+author: "Ryan Wesslen"
+date: "July 11, 2018"
+runtime: shiny
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse); library(quanteda)
+
+dfm <- readRDS("./data/dfm.RData")
+```
+
+## Shiny {.build}
+
+A **Shiny** app is a web page (UI) connected to a computer running a live R session (Server)
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-01.png")
+```
+
+Users can manipulate the UI, which will cause the server to update the UI's displays (by running R code).
+
+## Russian Troll Cooccurrence Plot
+
+<div style="margin-left:-20px; margin-top:-10px; width:100%; height:100%">
+```{r, echo=FALSE, message=FALSE, fig.width=8}
+inputPanel(
+  sliderInput("top", "Top X Words", value = 30, min = 10, max = 100, step = 5),
+  sliderInput("edgeAlpha", "Edge Transparency", value = 0.8, min = 0, max = 1, step = 0.05),
+  sliderInput("edgeSize", "Edge Thickness", value = 4, min = 1, max = 6, step = 0.5)
+)
+  
+renderPlot({
+  fcm(dfm) %>%
+    fcm_select(names(topfeatures(dfm, input$top))) %>%
+    textplot_network(min_freq = 0.1, edge_alpha = input$edgeAlpha, edge_size = input$edgeSize)
+  })
+```
+</div>
+
+----
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-02.png")
+```
+
+----
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-03.png")
+```
+
+----
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-template.png")
+```
+
+## Try This
+
+1. Open a new .R file
+
+2. Type this into the file. (Do you have the shiny package?)
+
+    ```{r, out.width = "600px"}
+    knitr::include_graphics("img/shiny/shiny-template2.png")
+    ```
+
+3. Click "Run"
+
+# User Interface: ui()
+
+## fluidPage()
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-04.png")
+```
+
+## Example
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-input-ex1.png")
+```
+
+## Example
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-input-ex2.png")
+```
+
+## Input Syntax
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-inputs-syntax.png")
+```
+
+## Inputs
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-inputs.png")
+```
+
+There are multiple common `Input()` functions.
+
+## What's in an Input function? HTML
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-input-ex3.png")
+```
+
+## Output Syntax
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-outputs-syntax.png")
+```
+
+## Example
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-outputs-ex1.png")
+```
+
+## Example
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-outputs-ex2.png")
+```
+
+## Example
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-outputs-ex3.png")
+```
+
+## Example
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-outputs-ex4.png")
+```
+
+## Output Options
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-outputs.png")
+```
+
+# ui Layouts
+
+## `sidebarLayout()`
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-layout1.png")
+```
+
+We can use template layouts to organize our objects.
+
+## `sidebarLayout()`
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-layout2.png")
+```
+
+## `sidebarLayout()`
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-layout3.png")
+```
+
+## Layouts
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-layouts.png")
+```
+
+## html tags if you know html
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-tags.png")
+```
+
+# Server: server()
+
+# Hands-On Example
