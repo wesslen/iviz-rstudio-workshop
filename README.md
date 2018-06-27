@@ -2,7 +2,7 @@
 
 In this three-part workshop series, we’ll use RStudio tools like tidyverse, Shiny, and htmlwidgets to develop interactive visualizations. 
 
-![](./slides/img/readme/beer.gif)
+![](./slides/img/readme/beer.gif "Geolocated Charlotte tweets mentioning 'beer'")
 
 ## Sponsored by 
 
