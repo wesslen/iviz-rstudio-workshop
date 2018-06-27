@@ -22,13 +22,26 @@ In this three-part workshop series, we’ll use RStudio tools like tidyverse, Sh
 
 ## Workshop Overview
 
-### Part 1: Intro to Shiny and tidyverse
+### Pre-workshop Work
+
+Please read and complete the [workshop installation steps](#install).
+
+Second, please consider signing up for a [DataCamp](https://www.datacamp.com/) account. They offer free accounts (with limited course materials) while I would recommend, though not required at all, the paid account. IMHO, they are the *best* hands-on resources for learning R, Python, SQL, and Git (yes, better than Udemy, Coursera, swirl, etc.).
+
+I would recommend:
+
+* [Introduction to the tidyverse](https://www.datacamp.com/courses/introduction-to-the-tidyverse)^
+* [Building Web Applications in R with Shiny](https://www.datacamp.com/courses/building-web-applications-in-r-with-shiny)
+
+^ first chapter is available in the free account; other material requires a pay account.
+
+### Part 1: Intro to tidyverse and Shiny
 
 We’ll introduce [**RStudio**](https://www.rstudio.com/products/RStudio/) along with [`tidyverse`](https://www.tidyverse.org/), a unified set of R packages for end-to-end data science. These packages include core data science workflow tools for data acquisition, processing and visualization. We’ll end with an introduction to [**Shiny**](http://shiny.rstudio.com/), an R package for building interactive web apps. Shiny apps are flexible web applications that can be embedded within web pages, dashboards, and [**RMarkdown**](https://rmarkdown.rstudio.com/) output like presentations or notebooks. 
 
 | Day 1: Wed July 11  | Intro to tidyverse and Shiny |
 | ------------------- | ------------------------------------------------------- |
-| Welcome             | [PollEverywhere](https://pollev.com/ryanwesslen365) and This GitHub Page |
+| Welcome             | [PollEverywhere](https://pollev.com/ryanwesslen365) and this GitHub Page |
 | Lecture             | [Introduction to Tidyverse](./slides/00-Tidyverse-webinar.pdf) |
 | Hands On Tutorial   | [Russian Trolls](./01-russian-trolls.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop1)   |
 | Lecture   | [Introduction to Shiny](./slides/intro-to-shiny.pdf) |
@@ -61,7 +74,7 @@ We’ll consider more advanced layout templates like [shinydashboard](https://rs
 | Lecture             | [Interactions, Persistent Storage, and In Production](./slides/03-shiny.pdf) |
 | Present Projects | Students present their Shiny systems. |
 
-## Instructions:
+## <a name="install"></a> Workshop Instructions:
 
 To run the code, you have two options.
 
