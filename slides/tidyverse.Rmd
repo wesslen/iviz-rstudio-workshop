@@ -270,7 +270,7 @@ df$actor.location.displayName <- factor(df$actor.location.displayName,
 ```
 
 ```{r echo=TRUE}
-df
+head(df, n = 5)
 ```
 
 
@@ -283,6 +283,57 @@ ggplot(df, aes(x = actor.location.displayName, y = Count)) +
   labs(x = "Profile Location", y = "Number of Tweets", 
        title = "Top 20 Profile Locations of Geolocated Clt Tweets")
 ```
+
+----
+
+```{r out.width = "700px", fig.align="center"}
+knitr::include_graphics("./img/tidyverse/ggplot4.png")
+```
+
+[ggplot2 cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+
+## ggplot example: gganimate
+
+```{r}
+library(gganimate)
+attributes(tweets$postedTime)$tzone <- "America/New_York" 
+```
+
+```{r echo=TRUE, message=FALSE}
+wkdy <- c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+
+df2 <- tweets %>%
+  mutate(Hour = format(postedTime, format="%H"), 
+           Weekday = weekdays(as.Date(postedTime)), 
+           Date = as.Date(postedTime)) %>%
+  group_by(Hour, Weekday, Date) %>%
+  summarise(Count=n()) %>%
+  ungroup() %>%
+  mutate(Weekday = factor(Weekday, levels = wkdy))
+
+head(df2, n=2)
+```
+
+## ggplot example: gganimate
+
+```{r echo=TRUE, message=FALSE, eval=FALSE}
+g <- ggplot(df2, aes(x = Hour, y = Count, frame = Weekday)) + 
+  geom_boxplot(width = 1) +
+  labs(x = "Hour", y = "Number of Tweets", 
+       title = "Timing of Charlotte Geolocated Tweets by Day:",
+       caption = "Tweets from Dec 2015 - Feb 2016") +
+  theme(legend.position = "bottom")
+
+gganimate(g, interval = 3)
+```
+
+## ggplot extensions
+
+```{r out.width = "800px", fig.align="center"}
+knitr::include_graphics("./img/tidyverse/ggextension.png")
+```
+
+[ggextensions](http://www.ggplot2-exts.org/gallery/)
 
 # tidyverse advanced packages
 
@@ -379,6 +430,39 @@ head(tidy_tweets, n = 5)
 
 <https://cran.r-project.org/web/packages/tidytext/vignettes/tidytext.html>
 
+## More advanced tidytext
+
+```{r message=FALSE}
+library(scales)
+tidy_tweets <- tweets %>% 
+  select(body, geo.type) %>%
+  unnest_tokens(word, body) %>% # tokenize body column
+  anti_join(stop_words)
+
+groupedTweets <- tidy_tweets %>% 
+  group_by(geo.type) %>%
+  count(word, sort = TRUE) %>%
+  filter(n > 5) %>%
+  left_join(tidy_tweets %>% 
+              group_by(geo.type) %>% 
+              summarise(total = n())) %>%
+  mutate(freq = n/total)
+
+groupedTweets <- groupedTweets %>% 
+  select(geo.type, word, freq) %>% 
+  spread(geo.type, freq) 
+```
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, fig.height = 3}
+ggplot(groupedTweets, aes(x = Point, y = Polygon)) +
+  geom_jitter(alpha = 0.1, size = 2.5, width = 0.1, height = 0.1) +
+  geom_text(aes(label = word), check_overlap = TRUE, vjust = 0.5) +
+  scale_x_log10(labels = percent_format()) + scale_y_log10(labels = percent_format()) +
+  geom_abline(color = "red")
+```
+
+[tidytext Book](https://www.tidytextmining.com/twitter.html#comparing-word-usage)
+
 ## Other important packages
 
 - Reading in SPSS, SAS, STATA: **haven** <http://haven.tidyverse.org/>
@@ -393,8 +477,6 @@ head(tidy_tweets, n = 5)
 
 - Package Management: **packrat** <https://rstudio.github.io/packrat/>
 
-# Appendix - M
-
 ## R Markdown for Replication
 
 This document is a R Markdown presentation (ioslides). 
@@ -404,7 +486,5 @@ Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word docu
 ```{r out.width = "250px", fig.align="center"}
 knitr::include_graphics("./img/tidyverse/rmarkdown.png")
 ```
-
-## gganimate
 
 For examples on using R Markdown, see <http://rmarkdown.rstudio.com/gallery.html>.

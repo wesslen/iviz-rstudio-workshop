@@ -4,9 +4,7 @@ In this three-part workshop series, we’ll use RStudio tools like tidyverse, Sh
 
 Beer Related Tweets        |  Russian Trolls
 :-------------------------:|:-------------------------:
-![](./slides/img/readme/beer.gif "Geolocated Charlotte tweets mentioning 'beer'")  |  ![](./slides/img/readme/russiatrolls.gif "Simple Shiny app for filtering Russian Troll Tweets")
-
-
+![](./slides/img/readme/beer.gif "Geolocated Charlotte tweets mentioning 'beer'")  |  ![](./slides/img/readme/russiatrolls.gif "Simple Shiny app for filtering Russian Troll Tweets") |
 
 ## Sponsored by 
 
