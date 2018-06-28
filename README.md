@@ -2,7 +2,11 @@
 
 In this three-part workshop series, we’ll use RStudio tools like tidyverse, Shiny, and htmlwidgets to develop interactive visualizations. 
 
-![](./slides/img/readme/beer.gif "Geolocated Charlotte tweets mentioning 'beer'")
+Beer Related Tweets        |  Russian Trolls
+:-------------------------:|:-------------------------:
+![](./slides/img/readme/beer.gif "Geolocated Charlotte tweets mentioning 'beer'")  |  ![](./slides/img/readme/russiatrolls.gif "Simple Shiny app for filtering Russian Troll Tweets")
+
+
 
 ## Sponsored by 
 
@@ -76,25 +80,15 @@ We’ll consider more advanced layout templates like [shinydashboard](https://rs
 
 ## <a name="install"></a> Workshop Instructions:
 
-To run the code, you have two options.
+For the purposes of the workshop, we'll be using RStudio Cloud. This will enable collaboration with other participants and facilitate the course materials.
 
-### 1) RStudio Cloud
+To get started, sign up for a free account [https://rstudio.cloud](https://rstudio.cloud/) (no need if you already have an account). If you already have a [shinyapps.io](https://shinyapps.io) account, you can use those credentials instead.
 
-I **highly** recommend using RStudio Cloud for workshop materials. 
+Next, use [this link](https://rstudio.cloud/spaces/2033/join?access_code=Uzsin6KPeCM9rlUR2szoaDSSzbqWAmFO8wCWe61F) to register for our workshop workspace. 
 
-If you don't have an account yet, you can sign up for a free account [https://rstudio.cloud](https://rstudio.cloud/). If you already have a [shinyapps.io](https://shinyapps.io) account, you can use those credentials instead.
+### Run R/RStudio Locally
 
-If that links doesn't work, you can create a new project from a GitHub repo, copy/paste 
-
-```{bash}
-https://github.com/wesslen/iviz-rstudio-workshop.git
-```
-
-and click enter. If you go this route, proceed to install the packages as described below.
-
-### 2) Run R/RStudio Locally
-
-You can also run the code locally. 
+Alternatively, it may be a good idea to install R and RStudio locally so you can have the materials for your own purposes.
 
 1. You will need to download [R](http://archive.linux.duke.edu/cran/) and [R Studio](https://www.rstudio.com/products/rstudio/download/) locally. 
 
@@ -117,14 +111,17 @@ Run the file `00-install-packages.R`.
 It runs this code:
 
 ```{r}
-packages <- c("tidyverse","plotly","shiny","leaflet","dygraphs","flexdashboard","ggridges",
+packages <- c("tidyverse","plotly","shiny","leaflet","dygraphs","flexdashboard","ggridges","learnr",
               "xts","igraph","visNetwork","tidytext","collapsibleTree","shinydashboard")
+
 install.packages(packages)
 
-# for r2d3 install
 packages2 <- c("devtools","digest","htmltools","htmlwidgets", "jsonlite","Rcpp","rstudioapi","yaml")
+
 install.packages(packages2)
 
+# need ggplot2 for plotly
+devtools::install_github('hadley/ggplot2')
 devtools::install_github("rstudio/r2d3")
 ```
 

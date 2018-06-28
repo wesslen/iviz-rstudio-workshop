@@ -8,4 +8,6 @@ packages2 <- c("devtools","digest","htmltools","htmlwidgets", "jsonlite","Rcpp",
 
 install.packages(packages2)
 
+# need ggplot2 for plotly
+devtools::install_github('hadley/ggplot2')
 devtools::install_github("rstudio/r2d3")
