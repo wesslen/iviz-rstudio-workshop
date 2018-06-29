@@ -12,11 +12,11 @@ Beer Related Tweets        |  Russian Trolls
 
 ## Date, Time and Location
 
-* July 11 (Part 1), July 18 (Part 2), and July 25 (Part 3) 
+* July 18 (Part 1), July 25 (Part 2), and August 1 (Part 3) 
 
 * 5:30 pm - 8:15 pm
 
-* XXX
+* CenterCity XXX
  
 ## Instructor
 
@@ -26,9 +26,9 @@ Beer Related Tweets        |  Russian Trolls
 
 ### Pre-workshop Work
 
-Please read and complete the [workshop installation steps](#install).
+First, please read and complete the [workshop installation steps](#install).
 
-Second, please consider signing up for a [DataCamp](https://www.datacamp.com/) account. They offer free accounts (with limited course materials) while I would recommend, though not required at all, the paid account. IMHO, they are the *best* hands-on resources for learning R, Python, SQL, and Git (yes, better than Udemy, Coursera, swirl, etc.).
+Second (optional), sign up for a [DataCamp](https://www.datacamp.com/) account. They offer free accounts (with limited course materials) while I would recommend, though not required at all, the paid account. IMHO, they are the *best* hands-on resources for learning R, Python, SQL, and Git (yes, better than Udemy, Coursera, swirl, etc.).
 
 I would recommend:
 
@@ -41,38 +41,43 @@ I would recommend:
 
 We’ll introduce [**RStudio**](https://www.rstudio.com/products/RStudio/) along with [`tidyverse`](https://www.tidyverse.org/), a unified set of R packages for end-to-end data science. These packages include core data science workflow tools for data acquisition, processing and visualization. We’ll end with an introduction to [**Shiny**](http://shiny.rstudio.com/), an R package for building interactive web apps. Shiny apps are flexible web applications that can be embedded within web pages, dashboards, and [**RMarkdown**](https://rmarkdown.rstudio.com/) output like presentations or notebooks. 
 
-| Day 1: Wed July 11  | Intro to tidyverse and Shiny |
+| Day 1: Wed July 18  | Intro to tidyverse and Shiny |
 | ------------------- | ------------------------------------------------------- |
 | Welcome             | [PollEverywhere](https://pollev.com/ryanwesslen365) and this GitHub Page |
-| Lecture             | [Introduction to Tidyverse](./slides/00-Tidyverse-webinar.pdf) |
-| Hands On Tutorial   | [Russian Trolls](./01-russian-trolls.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop1)   |
+| Lecture             | [Introduction to Tidyverse](http://rpubs.com/ryanwesslen/rviz-tutorial-tidy) |
+| Hands On Tutorial   | [Russian Trolls](./day1/01-russian-trolls.R) / [HTML](http://rpubs.com/ryanwesslen/rviz-tutorial-tidy2)   |
 | Lecture   | [Introduction to Shiny](./slides/intro-to-shiny.pdf) |
-| Hands On Tutorial   | Shiny Hello World and Deploying to shinyapps.io |
-| Hands On Assignment | [Day 1 Assignment](./assignments/day1.R) |
+| Hands On Tutorial   | [Shiny Hello World](./day1/app.R) and deploying to [shinyapps.io](http://shinyapps.io) |
+| Getting Help        | [How to ask for help](#help) |
+| Hands On Assignment | [Day 1 Assignment](./exercises/day1.R) |
+
+**Home assignment**
+
+Use the code 
 
 ### Part 2: Shiny and htmlwidgets
 
 We’ll dive deeper into Shiny apps and review basic architecture, layouts, and reactivity with hands-on examples. We’ll also introduce [**htmlwidgets**](http://www.htmlwidgets.org/) (e.g., plotly, r2d3, leaflet), simple R packages for producing HTML-based interactive visualizations that can be extended with HTML, CSS, and JavaScript. In this part, we’ll explore basic exploratory data analysis visualizations (line, bar, scatterplots) as well as how to visualize important aspects of social media data like social networks, unstructured text, and geospatial data.
 
-| Day 2: Wed July 18  | Shiny and htmlwidgets    |
+| Day 2: Wed July 25  | Shiny and htmlwidgets    |
 | ------------------- | ------------------------------------------------------- |
 | Refresher & Warm-up | [PollEverywhere](https://pollev.com/ryanwesslen365) and [Russian Trolls Text Search App](./02-shinyapp/app.R) |
 | Lecture             | [Intermediate Shiny](./slides/02-shiny.pdf) |
-| Hands On Tutorial   | [input/output code](./02-input-outputs.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop2)   |
+| Hands On Tutorial   | [input/output code](./day2/02-input-outputs.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop2)   |
 | Demo / Website   | [htmlwidgets](https://www.htmlwidgets.org/) |
-| Hands On Tutorial   | [htmlwidget code](./02-htmlwidgets.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop3)   |
-| Hands On Assignment | [Day 2 Assignment](./assignments/day2.R) |
+| Hands On Tutorial   | [htmlwidget code](./day2/02-htmlwidgets.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop3)   |
+| Hands On Assignment | [Day 2 Assignment](./exercises/day2.R) |
 
 ### Part 3: Advanced Shiny
 
 We’ll consider more advanced layout templates like [shinydashboard](https://rstudio.github.io/shinydashboard/) to provide professional looking dashboard templates. We’ll also explore advanced Shiny functionality including interactions, persistent storage, and deploying apps publicly on [shinyapps.io](https://www.shinyapps.io/).
 
 
-| Day 3: Wed July 25  | Advanced Shiny            |
+| Day 3: Wed Aug 1    | Advanced Shiny            |
 | ------------------- | ------------------------------------------------------- |
 | Warm-up             | [PollEverywhere](https://pollev.com/ryanwesslen365) |
-| Lecture             | [Templates: shinydashboard and flexdashboard](./slides/03-shiny.pdf) |
-| Hands On Tutorial   | [shinydashboard code](./04-templates.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop4)   |
+| Lecture             | [Templates: shinydashboard and flexdashboard](./slides/day3/03-shiny.pdf) |
+| Hands On Tutorial   | [shinydashboard code](./day3/04-templates.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop4)   |
 | Lecture             | [Interactions, Persistent Storage, and In Production](./slides/03-shiny.pdf) |
 | Present Projects | Students present their Shiny systems. |
 
@@ -125,7 +130,7 @@ devtools::install_github("rstudio/r2d3")
 
 ## Resources
 
-### Help! 
+### <a name="help"></a> Help! 
 
 This page is your best source for R help: <https://wesslen.github.io/fall2017-rworkshops/help.html>
 
