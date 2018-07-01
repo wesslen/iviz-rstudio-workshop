@@ -71,7 +71,7 @@ knitr::include_graphics("img/shiny/shiny-template.png")
 
 3. Click "Run"
 
-# User Interface: ui()
+# User Interface: `ui()` function
 
 ## fluidPage()
 
@@ -175,12 +175,28 @@ knitr::include_graphics("img/shiny/shiny-layout3.png")
 knitr::include_graphics("img/shiny/shiny-layouts.png")
 ```
 
-## html tags if you know html
+## html tags if you know HTML
 
 ```{r, out.width = "800px"}
 knitr::include_graphics("img/shiny/shiny-tags.png")
 ```
 
-# Server: server()
+# Server: `server()` function
+
+## `render()` functions
+
+
 
 # Hands-On Example
+
+Use the Russian Troll code (01-russian-trolls.R) to create your own Shiny app.
+
+It should include:
+
+1.  A text input
+
+2.  A sidebar/main layout
+
+3.  A plotly (via ggplot2) main output
+
+Bonus points: Learn from <https://plot.ly/r/shinyapp-plotly-events/> on how to capture (and output) interactions.

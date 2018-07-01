@@ -2,7 +2,7 @@
 
 In this three-part workshop series, we’ll use RStudio tools like tidyverse, Shiny, and htmlwidgets to develop interactive visualizations. 
 
-Beer Related Tweets        |  Russian Trolls
+Beer Related Tweets        |  Russian Twitter Trolls
 :-------------------------:|:-------------------------:
 ![](./slides/img/readme/beer.gif "Geolocated Charlotte tweets mentioning 'beer'")  |  ![](./slides/img/readme/russiatrolls.gif "Simple Shiny app for filtering Russian Troll Tweets") |
 
@@ -16,7 +16,7 @@ Beer Related Tweets        |  Russian Trolls
 
 * 5:30 pm - 8:15 pm
 
-* CenterCity XXX
+* [Packard Place](https://www.packard.place/) Classroom 110M
  
 ## Instructor
 
@@ -28,7 +28,7 @@ Beer Related Tweets        |  Russian Trolls
 
 First, please read and complete the [workshop installation steps](#install).
 
-Second (optional), sign up for a [DataCamp](https://www.datacamp.com/) account. They offer free accounts (with limited course materials) while I would recommend, though not required at all, the paid account. IMHO, they are the *best* hands-on resources for learning R, Python, SQL, and Git (yes, better than Udemy, Coursera, swirl, etc.).
+Second (optional), sign up for a [DataCamp](https://www.datacamp.com/) account. They offer free accounts (with limited course materials). I would recommend, though **not** required at all, the paid account. They are the *best* hands-on resources for learning R, Python, SQL, and Git (yes, better than Udemy, Coursera, swirl, etc.). 
 
 I would recommend:
 
@@ -43,17 +43,21 @@ We’ll introduce [**RStudio**](https://www.rstudio.com/products/RStudio/) along
 
 | Day 1: Wed July 18  | Intro to tidyverse and Shiny |
 | ------------------- | ------------------------------------------------------- |
-| Welcome             | [PollEverywhere](https://pollev.com/ryanwesslen365) and this GitHub Page |
+| Welcome             | [PollEverywhere](https://pollev.com/ryanwesslen365), this GitHub Page & [RStudio.Cloud sign-up](#install) |
 | Lecture             | [Introduction to Tidyverse](http://rpubs.com/ryanwesslen/rviz-tutorial-tidy) |
-| Hands On Tutorial   | [Russian Trolls](./day1/01-russian-trolls.R) / [HTML](http://rpubs.com/ryanwesslen/rviz-tutorial-tidy2)   |
+| Hands On Tutorial   | [Russian Twitter Trolls](./day1/01-russian-trolls.R) / [HTML](http://rpubs.com/ryanwesslen/rviz-tutorial-tidy2)   |
 | Lecture   | [Introduction to Shiny](./slides/intro-to-shiny.pdf) |
 | Hands On Tutorial   | [Shiny Hello World](./day1/app.R) and deploying to [shinyapps.io](http://shinyapps.io) |
-| Getting Help        | [How to ask for help](#help) |
-| Hands On Assignment | [Day 1 Assignment](./exercises/day1.R) |
+| Getting Help & Resources    | [How to ask for help](#help) |
+| Home Assignment | [Day 1 Assignment](./day1/assignment.R) |
 
 **Home assignment**
 
-Use the code 
+Use the Russian Twitter Troll data set to create a shiny app that queries on the keyword. The app should output the plotly-ggplot2 time series chart from [01-russian-trolls.R](./day1/01-russian-trolls.R). 
+
+**Extra Studying**
+
+* [Shiny Basics Tutorial](http://shiny.rstudio.com/articles/basics.html)
 
 ### Part 2: Shiny and htmlwidgets
 
@@ -61,12 +65,16 @@ We’ll dive deeper into Shiny apps and review basic architecture, layouts, and 
 
 | Day 2: Wed July 25  | Shiny and htmlwidgets    |
 | ------------------- | ------------------------------------------------------- |
-| Refresher & Warm-up | [PollEverywhere](https://pollev.com/ryanwesslen365) and [Russian Trolls Text Search App](./02-shinyapp/app.R) |
-| Lecture             | [Intermediate Shiny](./slides/02-shiny.pdf) |
+| Refresher & Warm-up | [PollEverywhere](https://pollev.com/ryanwesslen365) and [Part 1 Assignment]() |
+| Lecture             | [Shiny Reactivity](./slides/02-shiny.pdf) |
 | Hands On Tutorial   | [input/output code](./day2/02-input-outputs.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop2)   |
 | Demo / Website   | [htmlwidgets](https://www.htmlwidgets.org/) |
 | Hands On Tutorial   | [htmlwidget code](./day2/02-htmlwidgets.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop3)   |
-| Hands On Assignment | [Day 2 Assignment](./exercises/day2.R) |
+| Home Assignment | [Project](./day2/assignment.R) |
+
+**Home assignment**
+
+Use one of the three project data sets to develop your own Shiny app. 
 
 ### Part 3: Advanced Shiny
 
@@ -79,7 +87,7 @@ We’ll consider more advanced layout templates like [shinydashboard](https://rs
 | Lecture             | [Templates: shinydashboard and flexdashboard](./slides/day3/03-shiny.pdf) |
 | Hands On Tutorial   | [shinydashboard code](./day3/04-templates.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop4)   |
 | Lecture             | [Interactions, Persistent Storage, and In Production](./slides/03-shiny.pdf) |
-| Present Projects | Students present their Shiny systems. |
+| Present Projects | Students present their Shiny tools (optional). |
 
 ## <a name="install"></a> Workshop Instructions:
 
@@ -87,15 +95,17 @@ For the purposes of the workshop, we'll be using RStudio Cloud. This will enable
 
 To get started, sign up for a free account [https://rstudio.cloud](https://rstudio.cloud/) (no need if you already have an account). If you already have a [shinyapps.io](https://shinyapps.io) account, you can use those credentials instead.
 
-Next, use [this link](https://rstudio.cloud/spaces/2033/join?access_code=Uzsin6KPeCM9rlUR2szoaDSSzbqWAmFO8wCWe61F) to register for our workshop workspace. 
+Students will be emailed the location of the workshop workspace the day before the first workshop.
 
 ### Run R/RStudio Locally
 
-Alternatively, it may be a good idea to install R and RStudio locally so you can have the materials for your own purposes.
+Alternatively, it may be a good idea to install R and RStudio locally so you can have the materials for your long-term research/work purposes.
 
-1. You will need to download [R](http://archive.linux.duke.edu/cran/) and [R Studio](https://www.rstudio.com/products/rstudio/download/) locally. 
+To install R/RStudio locally:
 
-2. You'll need to download the GitHub repo through the Clone or Download button.
+1. Download [R](http://archive.linux.duke.edu/cran/) and [R Studio](https://www.rstudio.com/products/rstudio/download/). 
+
+2. Download this GitHub repo through the Clone or Download button (note, the repo will change over time).
 
 If you have Git setup on your computer, you can clone the repo into your current directory.
 
@@ -132,7 +142,7 @@ devtools::install_github("rstudio/r2d3")
 
 ### <a name="help"></a> Help! 
 
-This page is your best source for R help: <https://wesslen.github.io/fall2017-rworkshops/help.html>
+[This page is your best source for R help](https://wesslen.github.io/fall2017-rworkshops/help.html)
 
 Please read if you run into R-relate problems.
 
@@ -151,18 +161,7 @@ I **highly** recommend the first book for anyone wanting to learn R (and applyin
 * tidytext: <https://www.tidytextmining.com/>
 * R Studio Community (for help): <https://community.rstudio.com/>
 
-### DataCamp recommended courses:
-
-Free courses (no reason why not):
-
-* R Basics: <https://www.datacamp.com/courses/free-introduction-to-r>
-* Git: <https://www.datacamp.com/courses/introduction-to-git-for-data-science>
-* Intro to Python for Data Science: <https://www.datacamp.com/courses/intro-to-python-for-data-science>
-* All other “open” courses: <https://www.datacamp.com/community/open-courses>
-
-DataCamp has courses not just on R but Python, Git, and SQL.
-
-Premium Courses (require paying after first chapter)
+### DataCamp Tracks:
 
 * Data Manipulation for R Track: <https://www.datacamp.com/tracks/data-manipulation-with-r>
 * Data Visualization for R Track: <https://www.datacamp.com/tracks/data-visualization-with-r>
@@ -184,36 +183,40 @@ R Studio Webinars
 
 ### R Markdown / Shiny 
 
-Visualizations are critically important to any analysis. R includes helpful packages to enable advanced HTML visualizations (e.g., JavaScript, D3, VegaLite) with only knowing R!! 
-
 #### Shiny
 
-Shiny is the most important tool that enables full visualization systems. These can be run "locally" (i.e., on your own computer but only you can access) or on a server to deploy on the internet (e.g., anyone can reach the site). Typically, most people do not have a server at their disposal so the fastest way to deploy a Shiny app is through R Studio's Shinyapps.io free account. 
-
-* Shiny (Interactive Visualizations): <http://shiny.rstudio.com/>
-* Gallery: <http://shiny.rstudio.com/gallery/>
-* Tutorial (Basics): <http://shiny.rstudio.com/articles/basics.html>
-* Tutorial (Intermediate): <http://shiny.rstudio.com/articles/app-formats.html>
-* Tutorial (Deployment): <http://shiny.rstudio.com/articles/deployment-web.html>
-* Where to deploy test Shiny Apps: <http://www.shinyapps.io/>
-* Tracking interactions: <https://shiny.rstudio.com/articles/usage-metrics.html>
+* [Shiny (Interactive Visualizations)](http://shiny.rstudio.com/)
+* [Shiny Gallery](http://shiny.rstudio.com/gallery/)
+* [Tutorial (Basics)](http://shiny.rstudio.com/articles/basics.html)
+* [Tutorial (Intermediate)](http://shiny.rstudio.com/articles/app-formats.html)
+* [Tutorial (Deployment)](http://shiny.rstudio.com/articles/deployment-web.html)
+* [Where to deploy test Shiny Apps](http://www.shinyapps.io/)
+* [Tracking interactions](https://shiny.rstudio.com/articles/usage-metrics.html)
 * [Bring Google Analytics data back into R](https://www.computerworld.com/article/2486018/business-intelligence/business-intelligence-how-to-extract-custom-data-from-the-google-analytics-api.html)
 
 #### R Markdown
 
 [R Markdown](http://rmarkdown.rstudio.com/) is an example of [literate programming](https://en.wikipedia.org/wiki/Literate_programming), i.e., code combined with plain language (as well as code output). The output can be an HTML, pdf, or even a Word document!
 
-R Markdown can do nearly anything -- build a website, write a LaTeX paper for publication, even write a book! (For example, <http://r4ds.had.co.nz/> is written in R Markdown. See the [GitHub](https://github.com/hadley/r4ds).)
+R Markdown can do nearly anything -- build a website, write a LaTeX paper for publication, even write a book! (For example, [R for Data Science](http://r4ds.had.co.nz/) is written in R Markdown. See the [GitHub](https://github.com/hadley/r4ds).)
 
 * Gallery: <http://rmarkdown.rstudio.com/gallery.html>
 * Tutorial (Intro): <http://rmarkdown.rstudio.com/articles_intro.html>
 
-Flexdashboard: <http://rmarkdown.rstudio.com/flexdashboard/>
+[Flexdashboard](http://rmarkdown.rstudio.com/flexdashboard/)
 
 * Gallery: <http://rmarkdown.rstudio.com/flexdashboard/examples.html>
 * Tutorial (Intro): <http://rmarkdown.rstudio.com/flexdashboard/using.html>
 * Tutorial (use with Shiny): <http://rmarkdown.rstudio.com/flexdashboard/shiny.html>
 
-HTML Widgets (Javascript extensions in R): <http://www.htmlwidgets.org/>
+[HTML Widgets](http://www.htmlwidgets.org/) (Javascript extensions in R):
 
-* Gallery: <http://www.htmlwidgets.org/showcase_leaflet.html>
+* [HTML Widgets Gallery](http://www.htmlwidgets.org/showcase_leaflet.html)
+
+### Computational Social Science
+
+I've taught several past R workshops for text analysis, social media, and Computational Social Science.
+
+* [Spring 2017 Workshop in Topic Modeling in R](https://github.com/wesslen/Topic-Modeling-Workshop-with-R)
+* [Summer 2017 Social Media Workshop](https://github.com/wesslen/summer2017-socialmedia)
+* [Fall 2017 Computational Social Science Workshop Series](https://wesslen.github.io/fall2017-rworkshops/)

@@ -1,5 +1,5 @@
 ---
-title: "tidyverse"
+title: "RStudio & tidyverse"
 author: "Ryan Wesslen"
 date: "July 11, 2018"
 output: ioslides_presentation
@@ -10,14 +10,26 @@ knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse); library(png); library(jpeg)
 ```
 
+## R 
+
+```{r out.width = "750px", fig.align="center"}
+knitr::include_graphics("./img/tidyverse/baseR.gif")
+```
+
+## RStudio
+
+```{r out.width = "700px", fig.align="center"}
+knitr::include_graphics("./img/tidyverse/rstudio.gif")
+```
+
 ## Tidyverse
 
 The tidyverse is an opinionated collection of R packages designed for data science. 
 
 All packages share an underlying philosophy ('tidy') and common APIs. 
 
-```{r out.width = "400px", fig.align="center"}
-knitr::include_graphics("./img/tidyverse/tidyverse.jpeg")
+```{r out.width = "800px", fig.align="center"}
+knitr::include_graphics("./img/tidyverse/tidyverse.png")
 ```
 
 <https://www.tidyverse.org/>
@@ -120,6 +132,14 @@ David's [2018 RStudio::conf talk on teaching tidyverse](https://www.rstudio.com/
 
 # What is tidy?
 
+## [Wickham, 2014](http://vita.had.co.nz/papers/tidy-data.html)
+
+```{r out.width = "400px", fig.align="center"}
+knitr::include_graphics("./img/tidyverse/wickham-tidy.png")
+```
+
+> “Tidy datasets are all alike but every messy dataset is messy in its own way.” – Hadley Wickham
+
 ## tidy data
 
 ```{r out.width = "800px", fig.align="center"}
@@ -155,7 +175,7 @@ table2
 knitr::include_graphics("./img/tidyverse/tidy-spread.png")
 ```
 
-Replace reshape (R) and/or "pivot" (Excel) table function. 
+Replaces reshape (base R) and/or "pivot" (Excel) table function. 
 
 <http://tidyr.tidyverse.org/>
 
@@ -175,6 +195,10 @@ Functions are easiest to use when they are:
 
 2.  **Composable**:  They can be combined with other functions for multi-step operations
 
+```{r out.width = "500px", fig.align="center"}
+knitr::include_graphics("./img/tidyverse/legos.JPG")
+```
+
 # Core packages: dplyr, ggplot2, piping (%>%)
 
 ## dplyr: Data Munging/Transformation
@@ -185,14 +209,25 @@ knitr::include_graphics("./img/tidyverse/dplyr1.png")
 
 <http://dplyr.tidyverse.org/> [dplyr cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
+## Run tidyverse
+
+```{r echo=TRUE}
+# comment: to install tidyverse the first time
+# install.packages(tidyverse) 
+
+library(tidyverse)
+```
+
 ## dplyr 
 
-Load csv (readr)...
+Use `read_csv()` (from readr) and `select()` (from dplyr)...
 
-```{r echo=TRUE, message=FALSE, max.print=6}
+```{r echo=TRUE, message=FALSE, max.print=5}
 tweets <- read_csv("../data/CharlotteTweets20Sample.csv") # readr function
 
-select(tweets, body, postedTime, geo.type, point_long, point_lat) # view relevant columns
+samp <- select(tweets, body, geo.type, point_long, point_lat) # view relevant columns
+
+head(samp, n = 5) # view first 5 records
 ```
 
 ## dplyr 
@@ -217,17 +252,17 @@ summarise(df, Count = n())
 ```{r echo=TRUE}
 tweets %>%
   group_by(geo.type) %>%
-  summarise(Count=n())
+  summarise(Count = n())
 ```
 
 ## Piping gets really helpful for long commands...
 
 ```{r echo=TRUE}
 tweets %>% 
-  group_by(actor.location.displayName) %>%
-  summarise(Count=n()) %>%
-  arrange(desc(Count)) %>%
-  head(n=5)
+  group_by(actor.location.displayName) %>% # group by location
+  summarise(Count = n()) %>% # count records
+  arrange(desc(Count)) %>% # rank in descending
+  head(n = 5) # show first five
 ```
 
 ----
@@ -261,9 +296,9 @@ knitr::include_graphics("./img/tidyverse/ggplot3.png")
 ```{r, include=FALSE}
 df <- tweets %>% 
   group_by(actor.location.displayName) %>%
-  summarise(Count=n()) %>%
+  summarise(Count = n()) %>%
   arrange(desc(Count)) %>%
-  head(n=20)
+  head(n = 20)
 
 df$actor.location.displayName <- factor(df$actor.location.displayName, 
                                         levels = df$actor.location.displayName[order(df$Count)])
@@ -273,24 +308,42 @@ df$actor.location.displayName <- factor(df$actor.location.displayName,
 head(df, n = 5)
 ```
 
+## ggplot2: bar chart
+
+```{r fig.height=3.5, echo=TRUE}
+ggplot(df, aes(x = actor.location.displayName, y = Count)) + 
+  geom_col() # bar chart
+```
+
+## ggplot2: bar chart
+
+```{r fig.height=3.5, echo=TRUE}
+ggplot(df, aes(x = actor.location.displayName, y = Count)) + 
+  geom_col() + 
+  coord_flip() # flip the coordinates
+```
 
 ## ggplot2: Visualizations
 
 ```{r fig.height=3.5, echo=TRUE}
 ggplot(df, aes(x = actor.location.displayName, y = Count)) + 
-  geom_bar(stat = "identity") + 
+  geom_col() + 
   coord_flip() +
   labs(x = "Profile Location", y = "Number of Tweets", 
-       title = "Top 20 Profile Locations of Geolocated Clt Tweets")
+       title = "Top 20 Profile Locations of Geolocated Clt Tweets") # modify labels
 ```
 
-----
+## ggplot = layers
+
+```{r out.width = "500px", fig.align="center"}
+knitr::include_graphics("./img/tidyverse/ogre.gif")
+```
+
+## [ggplot2 cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
 
 ```{r out.width = "700px", fig.align="center"}
 knitr::include_graphics("./img/tidyverse/ggplot4.png")
 ```
-
-[ggplot2 cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
 
 ## ggplot example: gganimate
 
@@ -306,7 +359,7 @@ df2 <- tweets %>%
   mutate(Hour = format(postedTime, format="%H"), 
            Weekday = weekdays(as.Date(postedTime)), 
            Date = as.Date(postedTime)) %>%
-  group_by(Hour, Weekday, Date) %>%
+  group_by(Hour, Weekday, Date, geo.type) %>%
   summarise(Count=n()) %>%
   ungroup() %>%
   mutate(Weekday = factor(Weekday, levels = wkdy))
@@ -317,23 +370,26 @@ head(df2, n=2)
 ## ggplot example: gganimate
 
 ```{r echo=TRUE, message=FALSE, eval=FALSE}
-g <- ggplot(df2, aes(x = Hour, y = Count, frame = Weekday)) + 
+g <- ggplot(df2, aes(x = Hour, y = Count, frame = Weekday, color = geo.type)) + 
   geom_boxplot(width = 1) +
   labs(x = "Hour", y = "Number of Tweets", 
        title = "Timing of Charlotte Geolocated Tweets by Day:",
        caption = "Tweets from Dec 2015 - Feb 2016") +
-  theme(legend.position = "bottom")
+  theme(legend.position = c(0.2,0.8))
 
-gganimate(g, interval = 3)
+gganimate(g, interval = 5)
 ```
 
-## ggplot extensions
+## ggplot example: gganimate
 
-```{r out.width = "800px", fig.align="center"}
-knitr::include_graphics("./img/tidyverse/ggextension.png")
+```{r out.width = "500px", fig.align="center"}
+knitr::include_graphics("./img/tidyverse/animate.gif")
 ```
 
-[ggextensions](http://www.ggplot2-exts.org/gallery/)
+## [ggextensions](http://www.ggplot2-exts.org/gallery/)
+```{r out.width = "550px", fig.align="center"}
+knitr::include_graphics("./img/tidyverse/ggextensions.gif")
+```
 
 # tidyverse advanced packages
 
@@ -409,7 +465,7 @@ lego_movie %>%
 
 [SelectorGadget](https://cran.r-project.org/web/packages/rvest/vignettes/selectorgadget.html)
 
-## tidytext for simple text analysis
+## [tidytext](https://cran.r-project.org/web/packages/tidytext/vignettes/tidytext.html) for simple text analysis
 
 ```{r}
 library(tidytext)
@@ -428,9 +484,7 @@ tidy_tweets <- tweets %>%
 head(tidy_tweets, n = 5)
 ```
 
-<https://cran.r-project.org/web/packages/tidytext/vignettes/tidytext.html>
-
-## More advanced tidytext
+## More advanced tidytext (see [tidytext Book](https://www.tidytextmining.com/twitter.html#comparing-word-usage))
 
 ```{r message=FALSE}
 library(scales)
@@ -461,8 +515,6 @@ ggplot(groupedTweets, aes(x = Point, y = Polygon)) +
   geom_abline(color = "red")
 ```
 
-[tidytext Book](https://www.tidytextmining.com/twitter.html#comparing-word-usage)
-
 ## Other important packages
 
 - Reading in SPSS, SAS, STATA: **haven** <http://haven.tidyverse.org/>
@@ -488,3 +540,12 @@ knitr::include_graphics("./img/tidyverse/rmarkdown.png")
 ```
 
 For examples on using R Markdown, see <http://rmarkdown.rstudio.com/gallery.html>.
+
+## Time to Practice!
+
+Open **01-russian-trolls.R** file. 
+
+```{r out.width = "500px", fig.align="center"}
+knitr::include_graphics("./img/tidyverse/economist.png")
+```
+[Topic Modeling of Russian Troll Tweets](https://rawgit.com/wesslen/russian-troll-tweets/master/RussianTrolls.html)

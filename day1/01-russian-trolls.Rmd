@@ -1,0 +1,169 @@
+---
+title: "tidyverse Overview: Russian Trolls"
+author: "Ryan Wesslen"
+date: "July 11, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
+```
+
+## Intro
+
+### install and call packages
+
+First, we need to get `tidyverse`. Recall, you only need to install once (but you need to do it for each computer).
+
+After installing, you then need to call the library to "activate" it.
+
+```{r}
+# install packages
+# install.packages("tidyverse")
+
+# call (i.e., activate) tidyverse
+library(tidyverse)
+```
+
+## load csv file
+
+Next, let's load the csv file from the url.
+
+```{r}
+url <- "http://nodeassets.nbcnews.com/russian-twitter-trolls/tweets.csv"
+tweets <- read_csv(url)
+```
+
+## Count Function
+
+With the dataframe, let's use the `count()` function to count the number of tweets per user (user_key).
+
+```{r}
+# count function
+count(tweets, user_key)
+
+# assignment operator
+c <- count(tweets, user_key)
+
+# piping
+c2 <- tweets %>%
+  count(user_key)
+
+# group_by and summarise
+c3 <- tweets %>%
+  group_by(user_key) %>%
+  summarise(Count=n())
+```
+
+**Question**: What is the difference between these three dataframes?
+
+## What were the top tweets by retweet and favorite (likes) counts?
+
+Let's use other `dplyr` functions to examine the top retweets...
+
+```{r}
+tweets %>%
+  arrange(desc(retweet_count)) %>%
+  select(user_key, created_str, text, retweet_count)
+```
+
+... and most favorited (liked) tweets.
+
+```{r}
+tweets %>%
+  arrange(desc(favorite_count)) %>%
+  select(user_key, created_str, text, favorite_count)
+```
+
+We can then use ggplot to count the number of tweets per day.
+
+```{r}
+# ggplot
+sum <- tweets %>%
+  group_by(Date = as.Date(created_str)) %>% # convert string to Date format
+  summarise(Count = n())
+
+# create ggplot
+ggplot(data = sum, aes(x = Date, y = Count)) +
+  geom_line()
+
+tweets %>%
+  group_by(Date = as.Date(created_str)) %>%
+  summarise(Count = n())
+
+ggplot(data = sum, aes(x = Date, y = Count)) +
+  geom_line() +
+  geom_point() +
+  labs(title = "Daily Tweet Counts by Russian Trolls",
+       x = "Time (Day)",
+       y = "Number of Tweets",
+       caption = "Source: NBC News")
+```
+
+We can also save the plot to an object (m).
+
+```{r}
+# saving as an object
+m <- ggplot(data = sum, aes(x = Date, y = Count)) +
+  geom_line() +
+  geom_point()
+
+# you can manually call the object
+m
+```
+
+With that object, you can add new layers to the plot.
+
+```{r}
+# you can add layers
+m + labs(title = "Daily Tweet Counts by Russian Trolls",
+         x = "Time (Day)",
+         y = "Number of Tweets",
+         caption = "Source: NBC News")
+```
+
+## Stringr to filter text
+
+Let's use the `stringr` package to filter tweets that mention either #keithlamontscott or Charlotte (| is the "OR" operator).
+
+```{r}
+# use stringr for text filter -- part of the tidyverse 
+library(stringr)
+
+term <- "#keithlamontscott|charlotte"
+
+q <- tweets %>%
+  filter(str_detect(tolower(tweets$text), tolower(term)))
+```
+
+### Add in full pipeline
+
+Let's now link the data
+
+```{r}
+# with full pipeline
+term <- "obama"
+
+q <- tweets %>%
+  filter(str_detect(tolower(tweets$text), term)) %>%
+  group_by(Date = as.Date(created_str)) %>%
+  summarise(Count=n()) %>%
+  ggplot(aes(x = Date, y = Count)) +
+  geom_line() +
+  labs(title = paste0("Tweets filtered by `",term,"`"),
+  x = "Day",
+  y = "Number of Tweets")
+
+q
+```
+
+## first html widget: plotly
+
+Last, let's use the `plotly` package to make this ggplot interactive.
+
+```{r}
+# install.packages("plotly")
+library(plotly)
+
+ggplotly(q)
+```
