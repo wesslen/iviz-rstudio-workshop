@@ -28,9 +28,9 @@ Beer Related Tweets        |  Russian Twitter Trolls
 
 First, please read and complete the [workshop installation steps](#install).
 
-Second (optional), sign up for a [DataCamp](https://www.datacamp.com/) account. They offer free accounts (with limited course materials). I would recommend, though **not** required at all, the paid account. They are the *best* hands-on resources for learning R, Python, SQL, and Git (yes, better than Udemy, Coursera, swirl, etc.). 
+Second (optional), sign up for a [DataCamp](https://www.datacamp.com/) account. They offer free accounts (with limited course materials). I recommend, though **not** required at all, the paid account. They are the *best* hands-on resources for learning R, Python, SQL, and Git (yes, better than Udemy, Coursera, swirl, etc.). 
 
-I would recommend:
+I recommend:
 
 * [Introduction to the tidyverse](https://www.datacamp.com/courses/introduction-to-the-tidyverse)^
 * [Building Web Applications in R with Shiny](https://www.datacamp.com/courses/building-web-applications-in-r-with-shiny)
@@ -46,7 +46,7 @@ We’ll introduce [**RStudio**](https://www.rstudio.com/products/RStudio/) along
 | Welcome             | [PollEverywhere](https://pollev.com/ryanwesslen365), this GitHub Page & [RStudio.Cloud sign-up](#install) |
 | Lecture             | [Introduction to Tidyverse](http://rpubs.com/ryanwesslen/rviz-tutorial-tidy) |
 | Hands On Tutorial   | [Russian Twitter Trolls](./day1/01-russian-trolls.R) / [HTML](http://rpubs.com/ryanwesslen/rviz-tutorial-tidy2)   |
-| Lecture   | [Introduction to Shiny](./slides/intro-to-shiny.pdf) |
+| Lecture   | [Introduction to Shiny](https://unccviscenter.shinyapps.io/intro-to-shiny/) |
 | Hands On Tutorial   | [Shiny Hello World](./day1/app.R) and deploying to [shinyapps.io](http://shinyapps.io) |
 | Getting Help & Resources    | [How to ask for help](#help) |
 | Home Assignment | [Day 1 Assignment](./day1/assignment.R) |
@@ -55,9 +55,12 @@ We’ll introduce [**RStudio**](https://www.rstudio.com/products/RStudio/) along
 
 Use the Russian Twitter Troll data set to create a shiny app that queries on the keyword. The app should output the plotly-ggplot2 time series chart from [01-russian-trolls.R](./day1/01-russian-trolls.R). 
 
-**Extra Studying**
+**Extra studying**
 
 * [Shiny Basics Tutorial](http://shiny.rstudio.com/articles/basics.html)
+* [Shiny Intermediate Tutorial](http://shiny.rstudio.com/articles/app-formats.html)
+* [tidyverse learnR practice](./practice/day1/day1.Rmd)
+* Chapters [3](http://r4ds.had.co.nz/data-visualisation.html), [5](http://r4ds.had.co.nz/transform.html), and [7](http://r4ds.had.co.nz/exploratory-data-analysis.html) of [R for Data Science](http://r4ds.had.co.nz)
 
 ### Part 2: Shiny and htmlwidgets
 

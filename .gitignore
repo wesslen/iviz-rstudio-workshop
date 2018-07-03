@@ -1,5 +1,6 @@
 # Slides
-slides/
+/slides/
+/slides/*
 # History files
 .Rhistory
 .Rapp.history

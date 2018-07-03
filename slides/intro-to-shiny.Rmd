@@ -73,7 +73,7 @@ knitr::include_graphics("img/shiny/shiny-template.png")
 
 # User Interface: `ui()` function
 
-## fluidPage()
+## `fluidPage()`
 
 ```{r, out.width = "800px"}
 knitr::include_graphics("img/shiny/shiny-04.png")
@@ -117,6 +117,18 @@ knitr::include_graphics("img/shiny/shiny-input-ex3.png")
 knitr::include_graphics("img/shiny/shiny-outputs-syntax.png")
 ```
 
+## Output Options
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-outputs.png")
+```
+
+## Example
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-outputs-ex3.png")
+```
+
 ## Example
 
 ```{r, out.width = "800px"}
@@ -132,22 +144,16 @@ knitr::include_graphics("img/shiny/shiny-outputs-ex2.png")
 ## Example
 
 ```{r, out.width = "800px"}
-knitr::include_graphics("img/shiny/shiny-outputs-ex3.png")
-```
-
-## Example
-
-```{r, out.width = "800px"}
 knitr::include_graphics("img/shiny/shiny-outputs-ex4.png")
 ```
 
-## Output Options
+# ui Layouts
+
+## Layouts
 
 ```{r, out.width = "800px"}
-knitr::include_graphics("img/shiny/shiny-outputs.png")
+knitr::include_graphics("img/shiny/shiny-layouts.png")
 ```
-
-# ui Layouts
 
 ## `sidebarLayout()`
 
@@ -169,12 +175,6 @@ knitr::include_graphics("img/shiny/shiny-layout2.png")
 knitr::include_graphics("img/shiny/shiny-layout3.png")
 ```
 
-## Layouts
-
-```{r, out.width = "800px"}
-knitr::include_graphics("img/shiny/shiny-layouts.png")
-```
-
 ## html tags if you know HTML
 
 ```{r, out.width = "800px"}
@@ -183,20 +183,138 @@ knitr::include_graphics("img/shiny/shiny-tags.png")
 
 # Server: `server()` function
 
-## `render()` functions
+---
 
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-server1.png")
+```
 
+---
 
-# Hands-On Example
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-server2.png")
+```
 
-Use the Russian Troll code (01-russian-trolls.R) to create your own Shiny app.
+---
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-server2a.png")
+```
+
+---
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-server2b.png")
+```
+
+---
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-server2c.png")
+```
+
+---
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-server2d.png")
+```
+
+---
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-server3.png")
+```
+
+---
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-server4.png")
+```
+
+---
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-server5.png")
+```
+
+---
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-server6.png")
+```
+
+---
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-server-reactivity.png")
+```
+
+## Shiny: Output
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-server-output.png")
+```
+
+## Server Recap
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-server-recap.png")
+```
+
+## 15 minute Quick Assignment
+
+Open the `app.R` file in the day1 folder.
+
+Try these three tasks:
+
+1. add a new slider that sets the number of breaks for the rnorm() function
+
+2. add a textInput() that sets the name of the plot
+
+3. add a actionButton() that updates the name of the plot (part 2) only when clicking (hint: see ?observeEvent)
+
+# Deploying Apps to Shinyapps.io
+
+---
+
+```{r, out.width = "800px"}
+knitr::include_graphics("img/shiny/shiny-shinyapps.png")
+```
+
+## Setup connection to ShinyApps.io
+
+```{r, out.width = "700px"}
+knitr::include_graphics("img/shiny/deploy1.gif")
+```
+
+## Setup connection to ShinyApps.io
+
+```{r, out.width = "700px"}
+knitr::include_graphics("img/shiny/deploy2.gif")
+```
+
+## Deploy to ShinyApps.io
+
+```{r, out.width = "700px"}
+knitr::include_graphics("img/shiny/deploy3.gif")
+```
+
+## Deploy to ShinyApps.io
+
+```{r, out.width = "700px"}
+knitr::include_graphics("img/shiny/deploy4.gif")
+```
+
+## Home Assignment #1
+
+Use the Russian Troll code (`01-russian-trolls.R`) to create your own Shiny app.
 
 It should include:
 
-1.  A text input
+1.  A text input (i.e., what words to filter)
 
 2.  A sidebar/main layout
 
-3.  A plotly (via ggplot2) main output
+3.  A plotly (via ggplot2) main output (i.e., daily time series of posts with filtered word)
 
 Bonus points: Learn from <https://plot.ly/r/shinyapp-plotly-events/> on how to capture (and output) interactions.
