@@ -48,7 +48,7 @@ We’ll introduce [**RStudio**](https://www.rstudio.com/products/RStudio/) along
 | Hands On Tutorial   | [Russian Twitter Trolls](./day1/01-russian-trolls.R) / [HTML](http://rpubs.com/ryanwesslen/rviz-tutorial-tidy2)   |
 | Lecture   | [Introduction to Shiny](https://unccviscenter.shinyapps.io/intro-to-shiny/) |
 | Hands On Tutorial   | [Shiny Hello World](./day1/app.R) and deploying to [shinyapps.io](http://shinyapps.io) |
-| Getting Help & Resources    | [How to ask for help](#help) |
+| Help & Resources    | [How to ask for help](#help) |
 | Home Assignment | [Day 1 Assignment](./day1/assignment.R) |
 
 **Home assignment**
@@ -69,19 +69,24 @@ We’ll dive deeper into Shiny apps and review basic architecture, layouts, and 
 | Day 2: Wed July 25  | Shiny and htmlwidgets    |
 | ------------------- | ------------------------------------------------------- |
 | Refresher & Warm-up | [PollEverywhere](https://pollev.com/ryanwesslen365) and [Part 1 Assignment]() |
-| Lecture             | [Shiny Reactivity](./slides/02-shiny.pdf) |
+| Lecture             | [Shiny Reactivity](./slides/shiny-reactivity.pdf) |
 | Hands On Tutorial   | [input/output code](./day2/02-input-outputs.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop2)   |
+| Help & Resources | [RMarkdown & Shiny References](#shiny) |
 | Demo / Website   | [htmlwidgets](https://www.htmlwidgets.org/) |
 | Hands On Tutorial   | [htmlwidget code](./day2/02-htmlwidgets.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop3)   |
 | Home Assignment | [Project](./day2/assignment.R) |
 
 **Home assignment**
 
-Use one of the three project data sets to develop your own Shiny app. 
+Use one of the three project data sets to develop your own Shiny app. You can work individually or in groups of two.
+
+You will have the opportunity to present your app next time in class (completely optional) in case you want my or classmates' feedback.
+
+I can also work with anyone who's interested in putting their code/app online (e.g., GitHub) to create your Data Science portfolio.
 
 ### Part 3: Advanced Shiny
 
-We’ll consider more advanced layout templates like [shinydashboard](https://rstudio.github.io/shinydashboard/) to provide professional looking dashboard templates. We’ll also explore advanced Shiny functionality including interactions, persistent storage, and deploying apps publicly on [shinyapps.io](https://www.shinyapps.io/).
+We’ll consider more advanced layout templates like [shinydashboard](https://rstudio.github.io/shinydashboard/) to provide professional looking dashboard templates. We’ll also explore advanced Shiny functionality including interactions, persistent storage, and opimizing/scaling apps up (e.g., modular functions and async programming).
 
 
 | Day 3: Wed Aug 1    | Advanced Shiny            |
@@ -89,6 +94,7 @@ We’ll consider more advanced layout templates like [shinydashboard](https://rs
 | Warm-up             | [PollEverywhere](https://pollev.com/ryanwesslen365) |
 | Lecture             | [Templates: shinydashboard and flexdashboard](./slides/day3/03-shiny.pdf) |
 | Hands On Tutorial   | [shinydashboard code](./day3/04-templates.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop4)   |
+| Help & Resources | [Pulling Social Media Data](#data) |
 | Lecture             | [Interactions, Persistent Storage, and In Production](./slides/03-shiny.pdf) |
 | Present Projects | Students present their Shiny tools (optional). |
 
@@ -184,7 +190,7 @@ R Studio Webinars
 
 * <https://github.com/rstudio/webinars>
 
-### R Markdown / Shiny 
+### <a name="shiny"></a> R Markdown / Shiny 
 
 #### Shiny
 
@@ -216,10 +222,16 @@ R Markdown can do nearly anything -- build a website, write a LaTeX paper for pu
 
 * [HTML Widgets Gallery](http://www.htmlwidgets.org/showcase_leaflet.html)
 
-### Computational Social Science
+### <a name="data"></a>  Computational Social Science & Social Media Data
 
 I've taught several past R workshops for text analysis, social media, and Computational Social Science.
 
 * [Spring 2017 Workshop in Topic Modeling in R](https://github.com/wesslen/Topic-Modeling-Workshop-with-R)
 * [Summer 2017 Social Media Workshop](https://github.com/wesslen/summer2017-socialmedia)
 * [Fall 2017 Computational Social Science Workshop Series](https://wesslen.github.io/fall2017-rworkshops/)
+
+#### Social Media Data Sources
+
+* [Michael Kearney's rtweet package](http://rtweet.info)
+* [Bob Rudis' rtweet cookbook](https://rud.is/books/21-recipes/)
+* [Pablo Barbera's Rfacebook package](https://github.com/pablobarbera/Rfacebook)

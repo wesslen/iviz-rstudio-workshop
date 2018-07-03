@@ -1,7 +1,7 @@
 ---
 title: "RStudio & tidyverse"
 author: "Ryan Wesslen"
-date: "July 11, 2018"
+date: "July 18, 2018"
 output: ioslides_presentation
 ---
 
@@ -122,11 +122,11 @@ David Robinson: <http://varianceexplained.org/r/teach-tidyverse/>
 
 - %>% ("piping") isn’t too hard for beginners
 
+- R Projects instead of `setwd()` each time
+
 - "There’s only one way to do it"
 
 - Conclusion: **You have permission not to be boring**
-
-David Robinson: <http://varianceexplained.org/r/teach-tidyverse/>
 
 David's [2018 RStudio::conf talk on teaching tidyverse](https://www.rstudio.com/resources/videos/teach-the-tidyverse-to-beginners/)
 
@@ -201,13 +201,13 @@ knitr::include_graphics("./img/tidyverse/legos.JPG")
 
 # Core packages: dplyr, ggplot2, piping (%>%)
 
-## dplyr: Data Munging/Transformation
+## [dplyr: Data Transformation](http://dplyr.tidyverse.org/)
 
-```{r out.width = "600px", fig.align="left"}
+```{r out.width = "550px", fig.align="left"}
 knitr::include_graphics("./img/tidyverse/dplyr1.png")
 ```
 
-<http://dplyr.tidyverse.org/> [dplyr cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+[dplyr cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
 
 ## Run tidyverse
 
@@ -230,9 +230,7 @@ samp <- select(tweets, body, geo.type, point_long, point_lat) # view relevant co
 head(samp, n = 5) # view first 5 records
 ```
 
-## dplyr 
-
-Load csv (readr) and use dplyr functions.
+## dplyr: `group_by()` and `summarise()` 
 
 ```{r echo=TRUE, message=FALSE}
 tweets <- read_csv("../data/CharlotteTweets20Sample.csv") # readr function
@@ -273,7 +271,7 @@ knitr::include_graphics("./img/tidyverse/piping1.png")
 
 ## ggplot2: Visualizations
 
-```{r out.width = "800px", fig.align="center"}
+```{r out.width = "700px", fig.align="center"}
 knitr::include_graphics("./img/tidyverse/ggplot1.png")
 ```
 
@@ -281,13 +279,13 @@ knitr::include_graphics("./img/tidyverse/ggplot1.png")
 
 ## ggplot2: Visualizations
 
-```{r out.width = "800px", fig.align="center"}
+```{r out.width = "700px", fig.align="center"}
 knitr::include_graphics("./img/tidyverse/ggplot2.png")
 ```
 
 ## ggplot2: Visualizations
 
-```{r out.width = "800px", fig.align="center"}
+```{r out.width = "700px", fig.align="center"}
 knitr::include_graphics("./img/tidyverse/ggplot3.png")
 ```
 
@@ -341,7 +339,7 @@ knitr::include_graphics("./img/tidyverse/ogre.gif")
 
 ## [ggplot2 cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
 
-```{r out.width = "700px", fig.align="center"}
+```{r out.width = "600px", fig.align="center"}
 knitr::include_graphics("./img/tidyverse/ggplot4.png")
 ```
 
@@ -386,8 +384,9 @@ gganimate(g, interval = 5)
 knitr::include_graphics("./img/tidyverse/animate.gif")
 ```
 
-## [ggextensions](http://www.ggplot2-exts.org/gallery/)
-```{r out.width = "550px", fig.align="center"}
+## [ggplot2 extensions](http://www.ggplot2-exts.org/gallery/)
+
+```{r out.width = "600px", fig.align="center"}
 knitr::include_graphics("./img/tidyverse/ggextensions.gif")
 ```
 
@@ -484,7 +483,7 @@ tidy_tweets <- tweets %>%
 head(tidy_tweets, n = 5)
 ```
 
-## More advanced tidytext (see [tidytext Book](https://www.tidytextmining.com/twitter.html#comparing-word-usage))
+## [More advanced tidytext](https://www.tidytextmining.com/twitter.html#comparing-word-usage)
 
 ```{r message=FALSE}
 library(scales)
@@ -507,7 +506,7 @@ groupedTweets <- groupedTweets %>%
   spread(geo.type, freq) 
 ```
 
-```{r echo=TRUE, message=FALSE, warning=FALSE, fig.height = 3}
+```{r echo=TRUE, message=FALSE, warning=FALSE, fig.height = 3.5, fig.width=6, fig.align="center"}
 ggplot(groupedTweets, aes(x = Point, y = Polygon)) +
   geom_jitter(alpha = 0.1, size = 2.5, width = 0.1, height = 0.1) +
   geom_text(aes(label = word), check_overlap = TRUE, vjust = 0.5) +
@@ -515,7 +514,7 @@ ggplot(groupedTweets, aes(x = Point, y = Polygon)) +
   geom_abline(color = "red")
 ```
 
-## Other important packages
+## Other important "tidy" packages
 
 - Reading in SPSS, SAS, STATA: **haven** <http://haven.tidyverse.org/>
 
@@ -543,9 +542,8 @@ For examples on using R Markdown, see <http://rmarkdown.rstudio.com/gallery.html
 
 ## Time to Practice!
 
-Open **01-russian-trolls.R** file. 
+Open **01-russian-trolls.R** file. [Topic Modeling of Russian Troll Tweets](https://rawgit.com/wesslen/russian-troll-tweets/master/RussianTrolls.html)
 
 ```{r out.width = "500px", fig.align="center"}
 knitr::include_graphics("./img/tidyverse/economist.png")
 ```
-[Topic Modeling of Russian Troll Tweets](https://rawgit.com/wesslen/russian-troll-tweets/master/RussianTrolls.html)
