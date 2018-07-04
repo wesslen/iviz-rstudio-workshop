@@ -130,19 +130,19 @@ tweet_words %>%
 # devtools::install_github("rstudio/r2d3")
 library(r2d3)
 
-flare <- read.csv("./d3/flare.csv")
+flare <- read.csv("./day2/d3/flare.csv")
 
 # bubbles
-r2d3(data = flare, d3_version = 4, script = "./d3/bubbles.js")
+r2d3(data = flare, d3_version = 4, script = "./day2/d3/bubbles.js")
 
 # radial tree (includes radialtree.css)
-r2d3(data = flare, d3_version = 4, script = "./d3/radialtree.js")
+r2d3(data = flare, d3_version = 4, script = "./day2/d3/radialtree.js")
 
 # circlepacking (includes circlepacking.css)
-r2d3(data = jsonlite::read_json("./d3/flare.json"), d3_version = 4, script = "./d3/circlepacking.js")
+r2d3(data = jsonlite::read_json("./day2/d3/flare.json"), d3_version = 4, script = "./d3/circlepacking.js")
 
 # streamgraph on random data
-r2d3(data=c(), script = "./d3/streamgraph.js")
+r2d3(data=c(), script = "./day2/d3/streamgraph.js")
 
 # many more; see https://rstudio.github.io/r2d3/articles/gallery.html
 

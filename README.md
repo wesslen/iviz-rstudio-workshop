@@ -2,9 +2,11 @@
 
 In this three-part workshop series, we’ll use RStudio tools like tidyverse, Shiny, and htmlwidgets to develop interactive visualizations. 
 
-Beer Related Tweets        |  Russian Twitter Trolls
-:-------------------------:|:-------------------------:
-![](./slides/img/readme/beer.gif "Geolocated Charlotte tweets mentioning 'beer'")  |  ![](./slides/img/readme/russiatrolls.gif "Simple Shiny app for filtering Russian Troll Tweets") |
+Beer Related Tweets        |  Russian Twitter Trolls   |
+:-------------------------:|:-------------------------:|
+![](./slides/img/readme/beer.gif "Geolocated Charlotte tweets mentioning 'beer'")  |  ![](./slides/img/readme/russiatrolls.gif "Simple Shiny app for filtering Russian Troll Tweets")
+
+![](./slides/img/readme/protests.gif "Charlotte Protests")
 
 ## Sponsored by 
 
@@ -100,15 +102,15 @@ We’ll consider more advanced layout templates like [shinydashboard](https://rs
 
 ## <a name="install"></a> Workshop Instructions:
 
-For the purposes of the workshop, we'll be using RStudio Cloud. This will enable collaboration with other participants and facilitate the course materials.
+We'll use RStudio Cloud for the workshop. RStudio Cloud enables a collaborative workspace where participants can run pre-saved code. This avoids the headaches of everyone's unique machine set up.  
 
 To get started, sign up for a free account [https://rstudio.cloud](https://rstudio.cloud/) (no need if you already have an account). If you already have a [shinyapps.io](https://shinyapps.io) account, you can use those credentials instead.
 
-Students will be emailed the location of the workshop workspace the day before the first workshop.
+Students will be emailed the workshop link the week of the first workshop.
 
 ### Run R/RStudio Locally
 
-Alternatively, it may be a good idea to install R and RStudio locally so you can have the materials for your long-term research/work purposes.
+The cloud is great for workshop materials (< 1 GB memory). But it may not cut it for personal use (e.g., only < 1 GB). It may be a good idea to install R and RStudio locally so you can have the materials for your long-term research/work purposes. 
 
 To install R/RStudio locally:
 
