@@ -72,7 +72,7 @@ We’ll dive deeper into Shiny apps and review basic architecture, layouts, and 
 | ------------------- | ------------------------------------------------------- |
 | Refresher & Warm-up | [PollEverywhere](https://pollev.com/ryanwesslen365) and [Part 1 Assignment]() |
 | Lecture             | [Shiny Reactivity](./slides/shiny-reactivity.pdf) |
-| Hands On Tutorial   | [input/output code](./day2/02-input-outputs.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop2)   |
+| Hands On Tutorial   | [Reactivity code](./day2/reactivity/)  |
 | Help & Resources | [RMarkdown & Shiny References](#shiny) |
 | Demo / Website   | [htmlwidgets](https://www.htmlwidgets.org/) |
 | Hands On Tutorial   | [htmlwidget code](./day2/02-htmlwidgets.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop3)   |
@@ -90,12 +90,11 @@ I can also work with anyone who's interested in putting their code/app online (e
 
 We’ll consider more advanced layout templates like [shinydashboard](https://rstudio.github.io/shinydashboard/) to provide professional looking dashboard templates. We’ll also explore advanced Shiny functionality including interactions, persistent storage, and opimizing/scaling apps up (e.g., modular functions and async programming).
 
-
 | Day 3: Wed Aug 1    | Advanced Shiny            |
 | ------------------- | ------------------------------------------------------- |
 | Warm-up             | [PollEverywhere](https://pollev.com/ryanwesslen365) |
-| Lecture             | [Templates: shinydashboard and flexdashboard](./slides/day3/03-shiny.pdf) |
-| Hands On Tutorial   | [shinydashboard code](./day3/04-templates.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop4)   |
+| Lecture             | Templates [shinydashboard](./slides/shinydashboard.pdf) / [flexdashboard](./slides/flexdashboard.pdf) |
+| Hands On Tutorial   | [flexdashboard](./day3/04-templates.R)   |
 | Help & Resources | [Pulling Social Media Data](#data) |
 | Lecture             | [Interactions, Persistent Storage, and In Production](./slides/03-shiny.pdf) |
 | Present Projects | Students present their Shiny tools (optional). |

@@ -1,5 +1,3 @@
-# run for RStudio.Cloud
-# options(repos = "https://cran.rstudio.com/" )
 
 # call tidyverse -- if you get an error, do you have tidyverse installed??
 library(tidyverse)
@@ -50,7 +48,8 @@ weeklyCounts <- apply.weekly(dailyCounts, colSums)
 dygraph(dailyCounts, main = "Charlotte Geo-located Tweets") %>% 
   dyRangeSelector() %>%
   dyEvent("2016-02-08", "Super Bowl") %>%
-  dyEvent("2016-01-25", "NFC Championship")
+  dyEvent("2016-01-25", "NFC Championship") %>%
+  dyOptions(includeZero = TRUE)
 
 ## visNetwork http://datastorm-open.github.io/visNetwork/
 # install.packages("visNetwork"); install.packages("igraph")
@@ -120,7 +119,7 @@ tweet_words %>%
   facet_wrap(~Date, ncol = 4, scales = "free") +
   coord_flip()
 
-#### Advanced
+#### Advanced: D3
 
 ## r2d3 (https://rstudio.github.io/r2d3/)
 
