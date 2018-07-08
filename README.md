@@ -28,16 +28,12 @@ Beer Related Tweets        |  Russian Twitter Trolls   |
 
 ### Pre-workshop Work
 
-First, please read and complete the [workshop installation steps](#install).
+Please read and complete the [workshop installation steps](#install).
 
-Second (optional), sign up for a [DataCamp](https://www.datacamp.com/) account. They offer free accounts (with limited course materials). I recommend, though **not** required at all, the paid account. They are the *best* hands-on resources for learning R, Python, SQL, and Git (yes, better than Udemy, Coursera, swirl, etc.). 
+**Optional**: Sign up for a free [DataCamp](https://www.datacamp.com/) account and complete these two courses: 
 
-I recommend:
-
-* [Introduction to the tidyverse](https://www.datacamp.com/courses/introduction-to-the-tidyverse)^
-* [Building Web Applications in R with Shiny](https://www.datacamp.com/courses/building-web-applications-in-r-with-shiny)
-
-^ first chapter is available in the free account; other material requires a pay account.
+* [Introduction to the tidyverse (only chapter 1; other chapters cost $)](https://www.datacamp.com/courses/introduction-to-the-tidyverse)^
+* [Building Web Applications in R with Shiny (entire course is free!)](https://www.datacamp.com/courses/building-web-applications-in-r-with-shiny)
 
 ### Part 1: Intro to tidyverse and Shiny
 
@@ -66,7 +62,7 @@ Use the Russian Twitter Troll data set to create a shiny app that queries on the
 
 ### Part 2: Shiny and htmlwidgets
 
-We’ll dive deeper into Shiny apps and review basic architecture, layouts, and reactivity with hands-on examples. We’ll also introduce [**htmlwidgets**](http://www.htmlwidgets.org/) (e.g., plotly, r2d3, leaflet), simple R packages for producing HTML-based interactive visualizations that can be extended with HTML, CSS, and JavaScript. In this part, we’ll explore basic exploratory data analysis visualizations (line, bar, scatterplots) as well as how to visualize important aspects of social media data like social networks, unstructured text, and geospatial data.
+We’ll dive deeper into Shiny apps and review basic architecture, layouts, and reactivity with hands-on examples. We’ll also introduce [**htmlwidgets**](http://www.htmlwidgets.org/) (e.g., plotly, r2d3, leaflet), simple R packages for producing HTML-based interactive visualizations that can be extended with HTML, CSS, and JavaScript. In this part, we’ll visualize important aspects of social media data like social networks, unstructured text, and geospatial data.
 
 | Day 2: Wed July 25  | Shiny and htmlwidgets    |
 | ------------------- | ------------------------------------------------------- |
@@ -82,9 +78,7 @@ We’ll dive deeper into Shiny apps and review basic architecture, layouts, and 
 
 Use one of the three project data sets to develop your own Shiny app. You can work individually or in groups of two.
 
-You will have the opportunity to present your app next time in class (completely optional) in case you want my or classmates' feedback.
-
-I can also work with anyone who's interested in putting their code/app online (e.g., GitHub) to create your Data Science portfolio.
+You will have the opportunity to present your app next time in class (completely optional) in case you want my or classmates' feedback. I can also work with anyone who's interested in putting their code/app online (e.g., GitHub) to create your Data Science portfolio.
 
 ### Part 3: Advanced Shiny
 
@@ -109,15 +103,16 @@ Students will be emailed the workshop link the week of the first workshop.
 
 ### Run R/RStudio Locally
 
-The cloud is great for workshop materials (< 1 GB memory). But it may not cut it for personal use (e.g., only < 1 GB). It may be a good idea to install R and RStudio locally so you can have the materials for your long-term research/work purposes. 
+The cloud is great for workshop materials; but it is limited to only 1GB of memory. That's why RStudio Cloud is best only for this workshop, not long term. 
 
+For bigger projects, install R and RStudio locally so you can have the materials for your long-term research/work purposes. 
 To install R/RStudio locally:
 
 1. Download [R](http://archive.linux.duke.edu/cran/) and [R Studio](https://www.rstudio.com/products/rstudio/download/). 
 
-2. Download this GitHub repo through the Clone or Download button (note, the repo will change over time).
+2. Download this GitHub repo through the Download button or clone.
 
-If you have Git setup on your computer, you can clone the repo into your current directory.
+If you have Git setup on your computer, you can clone the repo into your current directory via terminal (command line):
 
 ```{bash}
 git clone https://github.com/wesslen/iviz-rstudio-workshop.git
@@ -127,21 +122,14 @@ git clone https://github.com/wesslen/iviz-rstudio-workshop.git
 
 ### Installing packages
 
-After getting RStudio set up, it's easier if you install the R libraries first (first set take about 3.5 minutes on cloud, second take about 30 seconds).
-
-Run the file `00-install-packages.R`.
-
-It runs this code:
+To install the workshop's packages, run the file `00-install-packages.R`. It runs this code:
 
 ```{r}
 packages <- c("tidyverse","plotly","shiny","leaflet","dygraphs","flexdashboard","ggridges","learnr",
-              "xts","igraph","visNetwork","tidytext","collapsibleTree","shinydashboard")
+              "xts","igraph","visNetwork","tidytext","collapsibleTree","shinydashboard","devtools",
+              "digest","htmltools","htmlwidgets", "jsonlite","Rcpp","rstudioapi","yaml")
 
 install.packages(packages)
-
-packages2 <- c("devtools","digest","htmltools","htmlwidgets", "jsonlite","Rcpp","rstudioapi","yaml")
-
-install.packages(packages2)
 
 # need ggplot2 for plotly
 devtools::install_github('hadley/ggplot2')
@@ -162,21 +150,21 @@ These resources are a best place to learn the basics. Traditionally, R was taugh
 
 I **highly** recommend the first book for anyone wanting to learn R (and applying Data Science).
 
-* R for Data Science Book: <http://r4ds.had.co.nz/>
-* Tidyverse: <https://www.tidyverse.org/>
-* ggplot2: <http://ggplot2.tidyverse.org/>
-* dplyr: <http://dplyr.tidyverse.org/>
-* tidyr: <http://tidyr.tidyverse.org/>
-* tidyquant: <https://business-science.github.io/tidyquant/>
-* tidytext: <https://www.tidytextmining.com/>
-* R Studio Community (for help): <https://community.rstudio.com/>
+* [R for Data Science Book](http://r4ds.had.co.nz/)
+* [Tidyverse](https://www.tidyverse.org/)
+* [ggplot2](http://ggplot2.tidyverse.org/)
+* [dplyr](http://dplyr.tidyverse.org/)
+* [tidyr](http://tidyr.tidyverse.org/)
+* [tidyquant](https://business-science.github.io/tidyquant/)
+* [tidytext](https://www.tidytextmining.com/)
+* [R Studio Community (for help)](https://community.rstudio.com/)
 
 ### DataCamp Tracks:
 
-* Data Manipulation for R Track: <https://www.datacamp.com/tracks/data-manipulation-with-r>
-* Data Visualization for R Track: <https://www.datacamp.com/tracks/data-visualization-with-r>
-* Statistics with R: <https://www.datacamp.com/tracks/statistics-with-r>
-* Machine Learning in R: <https://www.datacamp.com/tracks/machine-learning>
+* [Data Manipulation for R Track](https://www.datacamp.com/tracks/data-manipulation-with-r)
+* [Data Visualization for R Track](https://www.datacamp.com/tracks/data-visualization-with-r)
+* [Statistics with R](https://www.datacamp.com/tracks/statistics-with-r)
+* [Machine Learning in R](https://www.datacamp.com/tracks/machine-learning)
 
 ### R Studio Open Source (GitHub) Workshop Materials
 
