@@ -6,6 +6,7 @@ Beer Related Tweets        |  Russian Twitter Trolls   |
 :-------------------------:|:-------------------------:|
 ![](./slides/img/readme/beer.gif "Geolocated Charlotte tweets mentioning 'beer'")  |  ![](./slides/img/readme/russiatrolls.gif "Simple Shiny app for filtering Russian Troll Tweets")
 
+
 ![](./slides/img/readme/protests.gif "Charlotte Protests")
 
 ## Sponsored by 
@@ -32,8 +33,8 @@ Please read and complete the [workshop installation steps](#install).
 
 **Optional**: Sign up for a free [DataCamp](https://www.datacamp.com/) account and complete these two courses: 
 
-* [Introduction to the tidyverse (only chapter 1; other chapters cost $)](https://www.datacamp.com/courses/introduction-to-the-tidyverse)^
-* [Building Web Applications in R with Shiny (entire course is free!)](https://www.datacamp.com/courses/building-web-applications-in-r-with-shiny)
+* [Introduction to the tidyverse](https://www.datacamp.com/courses/introduction-to-the-tidyverse) (only chapter 1; other chapters cost $)
+* [Building Web Applications in R with Shiny](https://www.datacamp.com/courses/building-web-applications-in-r-with-shiny) (entire course is free!)
 
 ### Part 1: Intro to tidyverse and Shiny
 
@@ -105,8 +106,7 @@ Students will be emailed the workshop link the week of the first workshop.
 
 The cloud is great for workshop materials; but it is limited to only 1GB of memory. That's why RStudio Cloud is best only for this workshop, not long term. 
 
-For bigger projects, install R and RStudio locally so you can have the materials for your long-term research/work purposes. 
-To install R/RStudio locally:
+For bigger projects, install R and RStudio locally so you can have the materials for your long-term research/work purposes. To install R/RStudio locally:
 
 1. Download [R](http://archive.linux.duke.edu/cran/) and [R Studio](https://www.rstudio.com/products/rstudio/download/). 
 
@@ -148,9 +148,9 @@ Please read if you run into R-relate problems.
 
 These resources are a best place to learn the basics. Traditionally, R was taught on the core (or "Base") R packages. More recently, tidyverse has become the modern approach to learning R.
 
-I **highly** recommend the first book for anyone wanting to learn R (and applying Data Science).
+I **highly** recommend [R for Data Science Book](http://r4ds.had.co.nz/) for anyone wanting to learn R (and applying Data Science).
 
-* [R for Data Science Book](http://r4ds.had.co.nz/)
+You may also find these websites very helpful for each package:
 * [Tidyverse](https://www.tidyverse.org/)
 * [ggplot2](http://ggplot2.tidyverse.org/)
 * [dplyr](http://dplyr.tidyverse.org/)
@@ -206,10 +206,6 @@ R Markdown can do nearly anything -- build a website, write a LaTeX paper for pu
 * Gallery: <http://rmarkdown.rstudio.com/flexdashboard/examples.html>
 * Tutorial (Intro): <http://rmarkdown.rstudio.com/flexdashboard/using.html>
 * Tutorial (use with Shiny): <http://rmarkdown.rstudio.com/flexdashboard/shiny.html>
-
-[HTML Widgets](http://www.htmlwidgets.org/) (Javascript extensions in R):
-
-* [HTML Widgets Gallery](http://www.htmlwidgets.org/showcase_leaflet.html)
 
 ### <a name="data"></a>  Computational Social Science & Social Media Data
 
