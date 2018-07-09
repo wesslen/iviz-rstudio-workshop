@@ -166,18 +166,16 @@ You may also find these websites very helpful for each package:
 * [Statistics with R](https://www.datacamp.com/tracks/statistics-with-r)
 * [Machine Learning in R](https://www.datacamp.com/tracks/machine-learning)
 
-### R Studio Open Source (GitHub) Workshop Materials
+### RStudio Workshops & Webinars
 
-R Studio::conf Workshops:
+RStudio::conf Workshops:
 
-* <https://github.com/cwickham/data-science-in-tidyverse>
-* <https://github.com/jcheng5/shiny-training-rstudioconf-2018>
-* <https://github.com/rstudio-education/intro-shiny-rmarkdown>
-* <https://github.com/AmeliaMN/IntroToR>
+* [Amelia McNamera's Introduction to R & RStudio](https://github.com/AmeliaMN/IntroToR)
+* [Charlotte Wickham's Data Science in Tidyverse](https://github.com/cwickham/data-science-in-tidyverse)
+* [Mine Cetinkaya-Rundel's Intro to Shiny & RMarkdown](https://github.com/rstudio-education/intro-shiny-rmarkdown)
+* [Joe Cheng & Dean Attali's Intermediate Shiny](https://github.com/jcheng5/shiny-training-rstudioconf-2018)
 
-R Studio Webinars
-
-* <https://github.com/rstudio/webinars>
+[Past R Studio Webinars](https://github.com/rstudio/webinars)
 
 ### <a name="shiny"></a> R Markdown / Shiny 
 
@@ -198,14 +196,14 @@ R Studio Webinars
 
 R Markdown can do nearly anything -- build a website, write a LaTeX paper for publication, even write a book! (For example, [R for Data Science](http://r4ds.had.co.nz/) is written in R Markdown. See the [GitHub](https://github.com/hadley/r4ds).)
 
-* Gallery: <http://rmarkdown.rstudio.com/gallery.html>
-* Tutorial (Intro): <http://rmarkdown.rstudio.com/articles_intro.html>
+* [Gallery](http://rmarkdown.rstudio.com/gallery.html)
+* [Tutorial (Intro)](http://rmarkdown.rstudio.com/articles_intro.html)
 
 [Flexdashboard](http://rmarkdown.rstudio.com/flexdashboard/)
 
-* Gallery: <http://rmarkdown.rstudio.com/flexdashboard/examples.html>
-* Tutorial (Intro): <http://rmarkdown.rstudio.com/flexdashboard/using.html>
-* Tutorial (use with Shiny): <http://rmarkdown.rstudio.com/flexdashboard/shiny.html>
+* [Gallery](http://rmarkdown.rstudio.com/flexdashboard/examples.html)
+* [Tutorial (Intro)](http://rmarkdown.rstudio.com/flexdashboard/using.html)
+* [Tutorial (use with Shiny)](http://rmarkdown.rstudio.com/flexdashboard/shiny.html)
 
 ### <a name="data"></a>  Computational Social Science & Social Media Data
 
