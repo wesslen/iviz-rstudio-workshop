@@ -48,7 +48,7 @@ We’ll introduce [**RStudio**](https://www.rstudio.com/products/RStudio/) along
 | Lecture   | [Introduction to Shiny](https://unccviscenter.shinyapps.io/intro-to-shiny/) |
 | Hands On Tutorial   | [Shiny Hello World](./day1/app.R) and deploying to [shinyapps.io](http://shinyapps.io) |
 | Help & Resources    | [How to ask for help](#help) |
-| Home Assignment | [Day 1 Assignment](./day1/assignment.R) |
+| Home Assignment | See below |
 
 **Home assignment**
 
@@ -56,10 +56,13 @@ Use the Russian Twitter Troll data set to create a shiny app that queries on the
 
 **Extra studying**
 
-* [Shiny Basics Tutorial](http://shiny.rstudio.com/articles/basics.html)
-* [Shiny Intermediate Tutorial](http://shiny.rstudio.com/articles/app-formats.html)
+Shiny
+* [Benjamin Soltoff's University of Chicago Shiny Course: Shiny](https://cfss.uchicago.edu/shiny001_abc.html#objectives)
+
+Tidyverse
 * [tidyverse learnR practice](./practice/day1/day1.Rmd)
-* Chapters [3](http://r4ds.had.co.nz/data-visualisation.html), [5](http://r4ds.had.co.nz/transform.html), and [7](http://r4ds.had.co.nz/exploratory-data-analysis.html) of [R for Data Science](http://r4ds.had.co.nz)
+* [Data Carpentry: R for data analysis and visualization of Ecological Data](https://datacarpentry.org/R-ecology-lesson/00-before-we-start.html)
+* Chapters [3](http://r4ds.had.co.nz/data-visualisation.html), [5](http://r4ds.had.co.nz/transform.html), and [7](http://r4ds.had.co.nz/exploratory-data-analysis.html) in [R for Data Science](http://r4ds.had.co.nz)
 
 ### Part 2: Shiny and htmlwidgets
 
@@ -67,13 +70,13 @@ We’ll dive deeper into Shiny apps and review basic architecture, layouts, and 
 
 | Day 2: Wed July 25  | Shiny and htmlwidgets    |
 | ------------------- | ------------------------------------------------------- |
-| Refresher & Warm-up | [PollEverywhere](https://pollev.com/ryanwesslen365) and [Part 1 Assignment]() |
+| Refresher & Warm-up | [PollEverywhere](https://pollev.com/ryanwesslen365) and [Part 1 Assignment](./day2/01-trollApp/app.R) |
 | Lecture             | [Shiny Reactivity](./slides/shiny-reactivity.pdf) |
 | Hands On Tutorial   | [Reactivity code](./day2/reactivity/)  |
 | Help & Resources | [RMarkdown & Shiny References](#shiny) |
 | Demo / Website   | [htmlwidgets](https://www.htmlwidgets.org/) |
 | Hands On Tutorial   | [htmlwidget code](./day2/02-htmlwidgets.R) / [HTML](http://rpubs.com/ryanwesslen/iviz-workshop3)   |
-| Home Assignment | [Project](./day2/assignment.R) |
+| Home Assignment | Mini-project |
 
 **Home assignment**
 
@@ -88,11 +91,11 @@ We’ll consider more advanced layout templates like [shinydashboard](https://rs
 | Day 3: Wed Aug 1    | Advanced Shiny            |
 | ------------------- | ------------------------------------------------------- |
 | Warm-up             | [PollEverywhere](https://pollev.com/ryanwesslen365) |
+| Present Projects | Students present their Shiny tools (optional). |
 | Lecture             | Templates [shinydashboard](./slides/shinydashboard.pdf) / [flexdashboard](./slides/flexdashboard.pdf) |
 | Hands On Tutorial   | [flexdashboard](./day3/04-templates.R)   |
 | Help & Resources | [Pulling Social Media Data](#data) |
-| Lecture             | [Interactions, Persistent Storage, and In Production](./slides/03-shiny.pdf) |
-| Present Projects | Students present their Shiny tools (optional). |
+| Lecture             | [Advanced Shiny](./slides/03-shiny.pdf) / [radiant](http://vnijs.github.io/radiant/) [stminsights](https://methodds.github.io/stminsights/) |
 
 ## <a name="install"></a> Workshop Instructions:
 
