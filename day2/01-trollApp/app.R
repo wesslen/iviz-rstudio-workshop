@@ -29,6 +29,7 @@ server <- function(input, output) {
   
   #reactive event that runs only when the button is hit
   df <- eventReactive(input$go, { 
+    
     tweets %>%
       filter(str_detect(tolower(tweets$text), tolower(input$term))) %>% # replace with input
       group_by(Date = as.Date(created_str)) %>%
@@ -37,6 +38,9 @@ server <- function(input, output) {
   
   # render plotly can take a ggplot object (or plot_ly native object)
   output$plot <- renderPlotly({
+    
+    browser()
+    
     g <- df() %>% # since reactive, need ()'s!
     ggplot(aes(x = Date, y = Count)) + 
       geom_line() +

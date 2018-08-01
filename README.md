@@ -84,7 +84,7 @@ Use one of the three project data sets to develop your own Shiny app. You can wo
 
 You will have the opportunity to present your app next time in class (completely optional) in case you want my or classmates' feedback. I can also work with anyone who's interested in putting their code/app online (e.g., GitHub) to create your Data Science portfolio.
 
-### Part 3: Advanced Shiny
+### Part 3: RMarkdown/Advanced Shiny
 
 We’ll consider more advanced layout templates like [shinydashboard](https://rstudio.github.io/shinydashboard/) to provide professional looking dashboard templates. We’ll also explore advanced Shiny functionality including interactions, persistent storage, and opimizing/scaling apps up (e.g., modular functions and async programming).
 
@@ -92,10 +92,10 @@ We’ll consider more advanced layout templates like [shinydashboard](https://rs
 | ------------------- | ------------------------------------------------------- |
 | Warm-up             | [PollEverywhere](https://pollev.com/ryanwesslen365) |
 | Present Projects | Students present their Shiny tools (optional). |
+| Hands On Tutorial   | [Intro to RMarkdown](#rmarkdown) |
 | Lecture             | Templates [shinydashboard](./slides/shinydashboard.pdf) / [flexdashboard](./slides/flexdashboard.pdf) |
-| Hands On Tutorial   | [flexdashboard](./day3/04-templates.R)   |
 | Help & Resources | [Pulling Social Media Data](#data) |
-| Lecture             | [Advanced Shiny](./slides/03-shiny.pdf) / [radiant](http://vnijs.github.io/radiant/) [stminsights](https://methodds.github.io/stminsights/) |
+| Lecture             | [Profvis](https://rstudio.github.io/profvis/examples.html#example-3---profiling-a-shiny-application) / [Async Programming](https://shiny.rstudio.com/articles/async.html) / [Persistent Storage](https://daattali.com/shiny/persistent-data-storage/) / [radiant](http://vnijs.github.io/radiant/)|
 
 ## <a name="install"></a> Workshop Instructions:
 
@@ -193,7 +193,7 @@ RStudio::conf Workshops:
 * [Tracking interactions](https://shiny.rstudio.com/articles/usage-metrics.html)
 * [Bring Google Analytics data back into R](https://www.computerworld.com/article/2486018/business-intelligence/business-intelligence-how-to-extract-custom-data-from-the-google-analytics-api.html)
 
-#### R Markdown
+#### <a name="rmarkdown"></a> R Markdown
 
 [R Markdown](http://rmarkdown.rstudio.com/) is an example of [literate programming](https://en.wikipedia.org/wiki/Literate_programming), i.e., code combined with plain language (as well as code output). The output can be an HTML, pdf, or even a Word document!
 
@@ -207,6 +207,8 @@ R Markdown can do nearly anything -- build a website, write a LaTeX paper for pu
 * [Gallery](http://rmarkdown.rstudio.com/flexdashboard/examples.html)
 * [Tutorial (Intro)](http://rmarkdown.rstudio.com/flexdashboard/using.html)
 * [Tutorial (use with Shiny)](http://rmarkdown.rstudio.com/flexdashboard/shiny.html)
+
+[Blogdown](https://bookdown.org/yihui/blogdown/)
 
 ### <a name="data"></a>  Computational Social Science & Social Media Data
 
