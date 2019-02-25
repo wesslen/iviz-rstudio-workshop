@@ -45,7 +45,7 @@ We’ll introduce [**RStudio**](https://www.rstudio.com/products/RStudio/) along
 | Welcome             | [PollEverywhere](https://pollev.com/ryanwesslen365), this GitHub Page & [RStudio.Cloud sign-up](#install) |
 | Lecture             | [Introduction to Tidyverse](http://rpubs.com/ryanwesslen/rviz-tutorial-tidy) |
 | Hands On Tutorial   | [Russian Twitter Trolls](./day1/01-russian-trolls.R) / [HTML](http://rpubs.com/ryanwesslen/rviz-tutorial-tidy2)   |
-| Lecture   | [Introduction to Shiny](https://unccviscenter.shinyapps.io/intro-to-shiny/) |
+| Lecture   | [Introduction to Shiny](https://ryanwesslen.shinyapps.io/intro-to-shiny/) |
 | Hands On Tutorial   | [Shiny Hello World](./day1/app.R) and deploying to [shinyapps.io](http://shinyapps.io) |
 | Help & Resources    | [How to ask for help](#help) |
 | Home Assignment | See below |
